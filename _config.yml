@@ -6,16 +6,23 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://qmonnet.github.io"
+baseurl: "/whirl-offload"
+permalink: /:year/:month/:day/:title/
+
+# Site meta
+title: Whirl Offload
+description: Superfast networking technologies and open-source software — among other things. <br /> A blog about my work at <a href='http://www.6wind.com/'>6WIND</a>.
+
+author: Quentin Monnet • 6WIND
+
+repository: "qmonnet/whirl-offload"
+
+socnet_users:
+  - twitter_username: Qeole
+    github_username:  qmonnet
+  - twitter_username: 6WINDsoftware
+    github_username:  6WIND
 
 # Build settings
 markdown: kramdown
