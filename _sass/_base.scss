@@ -8,6 +8,12 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+article {
+  p, blockquote,
+  dl, dd, ol, ul, figure {
+    text-align: justify;
+  }
+}
 
 
 /**
@@ -23,6 +29,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    font-variant-numeric: oldstyle-nums;
 }
 
 
@@ -33,6 +40,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
+.decorated-table,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
@@ -54,10 +62,12 @@ img {
  */
 figure > img {
     display: block;
+    margin: 0 auto $spacing-unit/2 auto;
 }
 
 figcaption {
     font-size: $small-font-size;
+    text-align: center;
 }
 
 
@@ -95,11 +105,11 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $color-primary-2;
     }
 
     &:hover {
-        color: $text-color;
+        color: $color-complement-0;
         text-decoration: underline;
     }
 }
@@ -130,24 +140,20 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    font-family: "Fira Mono", monospace;
 }
 
-code {
+:not(pre) > code {
+    background-color: lighten($color-primary-1, 30%);
+    box-shadow: 1px 1px 0px 1px $color-complement-0;
     padding: 1px 5px;
+    margin-right: 2px;
 }
 
 pre {
     padding: 8px 12px;
     overflow-x: auto;
-
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
 }
 
 
@@ -202,5 +208,34 @@ pre {
         path {
             fill: $grey-color;
         }
+    }
+}
+
+
+
+/**
+ * Tables
+ */
+.decorated-table {
+    border-collapse: collapse;
+    min-width: 100%;
+
+    th, td {
+        padding: 5px;
+    }
+
+    th {
+        background-color: $color-primary-0;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: lighten($color-primary-1, 30%);
+    }
+    tr:nth-child(odd) {
+        background-color: lighten($color-primary-1, 40%);
+    }
+    tr:hover {
+        background-color: lighten($color-secondary-2-1, 30%);
     }
 }
