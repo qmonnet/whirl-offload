@@ -1,0 +1,55 @@
+            <script>
+              let toc = document.getElementById("markdown-toc")
+              let tocPadding
+              let tocHandle
+              if (toc != undefined) {
+                // Add link to open/close the ToC
+                let postMeta = document.getElementsByClassName("post-meta")[0]
+                tocHandle = document.createElement("span")
+                tocHandle.style.float      = "right"
+                tocHandle.style.color      = "#277553"
+                tocHandle.style.cursor     = "pointer"
+                tocHandle.style.fontSize   = "14px"
+                tocHandle.textContent      = "Table of contents"
+                tocHandle.addEventListener("click", toggleToc);
+                let tocArrow = document.createElement("span")
+                tocArrow.id                    = "toc-arrow"
+                tocArrow.style.display         = "inline-block"
+                tocArrow.style.marginRight     = ".5em"
+                tocArrow.style.transformOrigin = "60% 55%"
+                tocArrow.style.transition      = "all 0.5s ease-in-out"
+                tocArrow.textContent           = "◀"
+                tocHandle.insertBefore(tocArrow, tocHandle.firstChild)
+                postMeta.appendChild(tocHandle)
+
+                // Save initial padding
+                let cs = window.getComputedStyle(toc)
+                tocPadding = cs.getPropertyValue("padding")
+
+                // Close ToC by default
+                toc.style.opacity  = "0"
+                toc.style.height   = "0px"
+                toc.style.overflow = "hidden"
+                toc.style.padding  = "0px"
+              }
+
+              function toggleToc() {
+                let toc   = document.getElementById("markdown-toc")
+                let arrow = document.getElementById("toc-arrow")
+
+                if (toc.style.height == "0px") {
+                  toc.style.transition  = "opacity 1s ease-out"
+                  toc.style.opacity     = "1"
+                  toc.style.height      = "auto"
+                  toc.style.padding     = tocPadding
+                  arrow.style.transform = "rotate(-450deg)"
+                }
+                else {
+                  toc.style.transition  = ""
+                  toc.style.opacity     = "0"
+                  toc.style.height      = "0px"
+                  toc.style.padding     = "0px"
+                  arrow.style.transform = ""
+                }
+              }
+            </script>
