@@ -17,12 +17,12 @@ share some of it, so here we are: this is my technical blog about my work at
 
 Please note that this remains a personal blog: while my employer is fully aware
 of its existence, the articles are not reviewed in details by 6WIND. This is
-not even a roadmap blog. So opinions, points of views, technical mistakes and
-so on are my own; experiments do not necessarily result in new functionalities
-for the company's products; and **at no point should the responsibility of
-6WIND be engaged about something that is written here**. For your information,
-6WIND do have [an official blog](http://www.6wind.com/blog/), even though you
-may find that it is more commercial than technical.
+not even a roadmap blog. So opinions, points of view, technical mistakes and so
+on are my own; experiments do not necessarily result in new functionalities for
+the company's products; and **at no point should the responsibility of 6WIND be
+engaged about something that is written here**. For your information, 6WIND
+does have [an official blog](http://www.6wind.com/blog/), even though you may
+find that it is more commercial than technical.
 
 If you wish to react to something I wrote here, please feel free to send me an
 email or to ping me on Twitter.
@@ -104,6 +104,6 @@ International License](https://creativecommons.org/licenses/by/4.0/).
 I launched this blog in order to share my work with the community, so if you
 want to reuse some of the contents, please do not hesitate: help yourselves.
 And if you do so, it would be kind not to omit to attribute the work to its
-author and his company—thanks!
+author and to the company he works for—thanks!
 
 {% comment %} vim: set syntax=markdown spell tw=79 fo+=a: {% endcomment %}
