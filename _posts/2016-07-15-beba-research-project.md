@@ -72,7 +72,7 @@ BEBA project is split in a number of work packages, themselves divided in a
 number of tasks. Here is a summary list of the work packages.
 
 * **WP1** is related to management and administrative stuff. Nothing technical
-  here. It has been mentioned; now let's forget it.
+  here, so now let's put it aside.
 
 * **WP2** is a really interesting work package: it includes the conception, the
   definition and the validation, through proof-of-concept prototypes—be it
@@ -100,8 +100,8 @@ number of tasks. Here is a summary list of the work packages.
   (and they focusses on a particular processing that happens at the level of a
   switch, seen as a box) or as network-wide applications (and they rely on the
   interactions between several BEBA switches). I do not work specifically on
-  this part. But the example uses for BEBA switches are fun to describe, so you
-  may expect yet another article on this topic.
+  this part. But the examples used for BEBA switches are fun to describe, so
+  you may expect yet another article on this topic.
 
 * **WP6** is for tests. We devise the switches, implement and accelerate them,
   find ways to verify their settings, and find uses for them, in the previous
