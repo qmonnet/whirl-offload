@@ -45,13 +45,13 @@ stateful packet processing.
 1. [Introduction to SDN]({{ site.baseurl }}{% post_url
    2016-07-08-introduction-to-sdn %}) — not directly related to BEBA.
 2. The present article, a general overview of the project.
+3. [OpenState]({{ site.baseurl }}{% post_url
+   2016-07-17-openstate-stateful-packet-processing %}), the first version of
+   the abstraction layer.
 4. Hopefully, more to come!
 
 {% comment %}
 These are work in progress, or simply post ideas
-3. [OpenState]({{ site.baseurl }}{% post_url
-   2016-07-17-openstate-stateful-packet-processing %}), the first version of
-   the abstraction layer.
 4. BEBA's use cases, a description of the principle use cases defined in the
    project.
 5. Software acceleration, because _speed matters_.
