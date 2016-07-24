@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="215.51667"
+     inkscape:cx="339.26035"
      inkscape:cy="150.69006"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -526,7 +526,7 @@
        transform="matrix(0.1625007,0,0,0.1625007,652.46638,-22.439084)" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#003b22;stroke-width:3.20098519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 107.38929,529.6653 77.26729,54.21009"
+       d="m 107.38931,529.66529 77.26727,54.2101"
        id="path197990"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -534,7 +534,7 @@
        inkscape:connection-end="#g435550-9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#003b22;stroke-width:3.20098519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 202.47519,540.63625 0,33.85209"
+       d="m 202.47518,540.63625 0,33.85209"
        id="path197992"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -542,7 +542,7 @@
        inkscape:connection-end="#g435550-9" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#003b22;stroke-width:3.20098519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 91.038634,596.37679 88.525746,0"
+       d="m 91.038634,596.37678 88.525746,0"
        id="path197994"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -756,7 +756,7 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#003b22;stroke-width:3.20098519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 91.038631,759.57714 88.525749,-10e-6"
+       d="m 91.038631,759.57713 88.525749,0"
        id="path197996"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -794,7 +794,7 @@
          sodipodi:role="line"
          id="tspan293495-0"
          x="326.95593"
-         y="661.42554">Harware switch</tspan></text>
+         y="661.42554">Hardware switch</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.00492668px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -814,7 +814,7 @@
          id="tspan293596">hypervisors</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#003b22;stroke-width:3.20098519;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 202.47519,618.26522 0,119.42347"
+       d="m 202.47519,618.26522 0,127.39797"
        id="path293708"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
