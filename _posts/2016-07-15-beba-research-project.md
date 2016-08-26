@@ -48,12 +48,13 @@ stateful packet processing.
 3. [OpenState]({{ site.baseurl }}{% post_url
    2016-07-17-openstate-stateful-packet-processing %}), the first version of
    the abstraction layer.
-4. Hopefully, more to come!
+4. [BEBA's use cases]({{ site.baseurl }}{% post_url
+   2016-08-26-stateful-processing-use-cases %}), a description of some of the
+   principle use cases defined in the project.
+5. Hopefully, more to come!
 
 {% comment %}
 These are work in progress, or simply post ideas
-4. BEBA's use cases, a description of the principle use cases defined in the
-   project.
 5. Software acceleration, because _speed matters_.
 6. Open Packet Processor, the final version of BEBA's abstraction layer.
 {% endcomment %}
