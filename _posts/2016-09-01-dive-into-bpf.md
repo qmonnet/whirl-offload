@@ -206,6 +206,12 @@ About **cBPF**:
   [The code of this project](https://github.com/cilium/cilium)
   is available on GitHub.
 
+* [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
+  (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
+  **InKeV** is an eBPF-based datapath architecture for virtual networks,
+  targeting data center networks. It was initiated by PLUMgrid, and claims to
+  achieve better performances than OVS-based OpenStack solutions.
+
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/book.svg"/>
 </figure>
