@@ -655,7 +655,8 @@ BPF.
 And come back on this blog from time to time to see if they are
 new articles [about BPF]({{ site.baseurl }}/categories/#BPF)!
 
-_Special thanks to Daniel Borkmann for the numerous additional documents he
-pointed to me so that I could complete this collection._
+_Special thanks to Daniel Borkmann for the numerous
+[additional documents](https://github.com/qmonnet/whirl-offload/commit/d694f8081ba00e686e34f86d5ee76abeb4d0e429)
+he pointed to me so that I could complete this collection._
 
 {% comment %} vim: set syntax=markdown spell tw=79 fo+=a: {% endcomment %}
