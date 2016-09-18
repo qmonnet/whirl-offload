@@ -121,7 +121,9 @@ BPF internals:
 * [*On getting tc classifier fully programmable with cls_bpf*](http://www.netdevconf.org/1.1/proceedings/slides/borkmann-tc-classifier-cls-bpf.pdf)
   (Daniel Borkmann, netdev 1.1, Sevilla, February 2016):<br />
   After introducing eBPF, this presentation provides insights on many **internal
-  BPF mechanisms** (map management, tail calls, verifier). A must-read!
+  BPF mechanisms** (map management, tail calls, verifier). A must-read! For the
+  most ambitious,
+  [the full paper is available here](http://www.netdevconf.org/1.1/proceedings/papers/On-getting-tc-classifier-fully-programmable-with-cls-bpf.pdf).
 
 The [**IO Visor blog**](https://www.iovisor.org/resources/blog) has some
 interesting technical articles about BPF. Some of them contain a bit of
@@ -159,6 +161,10 @@ About **cBPF**:
   (Steven McCanne and Van Jacobson, 1992):<br />
   The original paper about (classic) BPF.
 
+* Daniel Borkmann realized at least two presentations on cBPF,
+  [one in 2013 on mmap, BPF and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf), and
+  [a very complete one in 2014 on tc and cls\_bpf](http://borkmann.ch/talks/2014_devconf.pdf).
+
 * [Libpcap filters syntax](http://biot.com/capstats/bpf.html)
 
 ### About XDP
@@ -171,15 +177,22 @@ About **cBPF**:
   The first presentation about XDP.
 
 * [_BoF - What Can BPF Do For You?_](https://events.linuxfoundation.org/sites/events/files/slides/iovisor-lc-bof-2016.pdf)
-  (Brenden Blanco, LinuxCon, Toronto, August 2016):<br />
+  (Brenden Blanco, LinuxCon, Toronto, August 2016).<br />
 
 * [_eXpress Data Path_](http://www.slideshare.net/IOVisor/express-data-path-linux-meetup-santa-clara-july-2016)
   (Brenden Blanco, Linux Meetup at Santa Clara, July 2016):<br />
   Contains some (somewhat marketing?) **benchmark results**! With a single core:
-    * ip routing drop: ~3.6 million packets per second (Mpps)
-    * tc (with clsact qdisc) drop using BPF: ~4.2 Mpps
-    * XDP drop using BPF: 20 Mpps (<10 % CPU utilization)
-    * XDP forward (on port on which the packet was received) with rewrite: 10 Mpps
+  * ip routing drop: ~3.6 million packets per second (Mpps)
+  * tc (with clsact qdisc) drop using BPF: ~4.2 Mpps
+  * XDP drop using BPF: 20 Mpps (<10 % CPU utilization)
+  * XDP forward (on port on which the packet was received) with rewrite: 10 Mpps
+
+  (Tests performed with the mlx4 driver).
+
+* [_XDP − eXpress Data Path, Intro and future use-cases_](http://people.netfilter.org/hawk/presentations/xdp2016/xdp_intro_and_use_cases_sep2016.pdf)
+  (Jesper Dangaard Brouer, September 2016):<br />
+  _“Linux Kernel’s fight against DPDK”_. **Future plans** (as of this writing)
+  for XDP and comparison with DPDK.
 
 ### About other components related or based on eBPF
 
@@ -187,6 +200,12 @@ About **cBPF**:
   (John Fastabend, May 2016):<br />
   Presents the use of **P4**, a description language for packet processing,
   with BPF to create high-performance programmable switches.
+
+* If you like audio presentations, there is an associated
+  [OVS Orbit episode (#11), called _**P4** on the Edge_](https://ovsorbit.benpfaff.org/#e11),
+  dating from August 2016. OVS Orbit are interviews realized by Ben Pfaff, who
+  is one of the core maintainers of Open vSwitch. In this case, John Fastabend
+  is interviewed.
 
 * [_P4, EBPF and Linux TC Offload_](http://open-nfp.org/media/pdfs/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL.pdf)
   (Dinan Gunawardena and Jakub Kicinski, August 2016):<br />
@@ -205,6 +224,10 @@ About **cBPF**:
   containers based on eBPF programs generated on the fly”.
   [The code of this project](https://github.com/cilium/cilium)
   is available on GitHub.
+
+* There is also an
+  [OVS Orbit episode (#4) about **Cilium**](https://ovsorbit.benpfaff.org/).
+  An interview of Thomas Graf, by Ben Pfaff (May 2016)
 
 * [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
   (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
@@ -344,6 +367,10 @@ find these examples under the
 [linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
 directory.
 
+Also do not forget to have a look to the logs related to the (git) commits that
+introduced a particular feature, they may contain some detailed example of the
+feature.
+
 ### From package iproute2
 
 The iproute2 package provide several examples as well. They are obviously
@@ -416,6 +443,13 @@ the relevant files, finding the functions you want is up to you!
   names: `verifier.c` contains the **verifier** (no kidding), `arraymap.c` the
   code used to interact with **maps** of type array, and so on.
 
+* The **helpers**, as well as several functions related to networking (with tc,
+  XDP…) and available to the user, are implemented in
+  [linux/net/core/filter.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/filter.c).
+  It also contains the code to migrate cBPF bytecode to eBPF (since all cBPF
+  programs are now translated to eBPF in the kernel before being run).
+
+
 * The **JIT compilers** are under the directory of their respective
   architectures, such as file
   [linux/arch/x86/net/bpf\_jit\_comp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/arch/x86/net/bpf_jit_comp.c)
@@ -427,8 +461,15 @@ the relevant files, finding the functions you want is up to you!
   (filter).
 
 * I have not hacked with **event tracing** in BPF, so I do not really know
-  about the hooks for such programs. If you are interested in this, you may dig
-  on the side of Brendan Gregg's presentations or blog posts.
+  about the hooks for such programs. There is some stuff in
+  [linux/kernel/trace/bpf\_trace.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/trace/bpf_trace.c).
+  If you are interested in this and want to know more, you may dig on the side
+  of Brendan Gregg's presentations or blog posts.
+
+* Nor have I used **seccomp-BPF**. But the code is in
+  [linux/kernel/seccomp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/seccomp.c),
+  and some example use cases can be found in
+  [linux/tools/testing/selftests/seccomp/seccomp\_bpf.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/seccomp/seccomp_bpf.c).
 
 ### XDP hooks code
 
@@ -466,6 +507,21 @@ file, so this is probably where you should head to if you want to mess up with
 BPF and tc. There is a last file related to BPF: this is q\_clsact.c, that
 defines the `clsact` qdisc especially created for BPF.
 
+### BPF utilities
+
+The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`,
+`bpf_jit_disasm.c`) related to BPF, under the
+[linux/tools/net/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/net)
+directory:
+
+* `bpf_asm` is a minimal cBPF assembler.
+* `bpf_dbg` is a small debugger for cBPF programs.
+* `bpf_jit_disasm` is generic for both BPF flavors and could be highly useful
+  for JIT debugging.
+
+Read the comments at the top of the source files to get an overview of their
+usage.
+
 ### Other interesting chunks
 
 If you are interested the use of less common languages with BPF, bcc contains
@@ -474,6 +530,18 @@ as well as
 [a **Lua front-end**](https://github.com/iovisor/bcc/tree/master/src/lua) that
 can be used as alternatives to the C subset and (in the case of Lua) to the
 Python tools.
+
+### Commit logs
+
+As stated earlier, do not hesitate to have a look at the commit log that introduced a particular
+BPF feature if you want to have more information about it. You can search the
+logs in many places, such as on
+[git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
+[on GitHub](https://github.com/torvalds/linux), or on your local
+repository if you have cloned it. If you are not familiar with git, try things
+like `git blame <file>` to see what commit introduced a particular line of
+code, then `git show <commit>` to have details (or search by keyword in `git
+log` results, but this may be tedious).
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/wand.svg"/>
@@ -586,5 +654,8 @@ BPF.
 
 And come back on this blog from time to time to see if they are
 new articles [about BPF]({{ site.baseurl }}/categories/#BPF)!
+
+_Special thanks to Daniel Borkmann for the numerous additional documents he
+pointed to me so that I could complete this collection._
 
 {% comment %} vim: set syntax=markdown spell tw=79 fo+=a: {% endcomment %}
