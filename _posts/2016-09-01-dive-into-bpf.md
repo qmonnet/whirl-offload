@@ -320,6 +320,16 @@ generic functioning. Here are a couple of resources about it.
   for this tool, and it should be shipped with package iproute2 coming with
   kernel version 4.6 and higher!
 
+### About XDP
+
+* Some
+  [work-in-progress documentation (including specifications)](https://prototype-kernel.readthedocs.io/en/latest/networking/XDP/index.html)
+  for XDP started by Jesper Dangaard Brouer, but meant to be a collaborative
+  work. Under progress (September 2016): you should expect it to change, and
+  maybe to be moved at some point (Jesper
+  [called for contribution](https://marc.info/?l=linux-netdev&m=147436253625672),
+  if you feel like improving it).
+
 ### About P4 and BPF
 
 [P4](http://p4.org/) is a language used to specify the behavior of a switch. It
