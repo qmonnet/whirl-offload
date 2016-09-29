@@ -227,7 +227,11 @@ About **cBPF**:
 
 * There is also an
   [OVS Orbit episode (#4) about **Cilium**](https://ovsorbit.benpfaff.org/).
-  An interview of Thomas Graf, by Ben Pfaff (May 2016)
+  An interview of Thomas Graf, by Ben Pfaff (May 2016).
+
+* **Suricata**, an open source intrusion detection system,
+  [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
+  for its “capture bypass” features.
 
 * [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
   (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
