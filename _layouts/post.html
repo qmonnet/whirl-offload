@@ -15,10 +15,10 @@ layout: default
 
           <nav class="prevnext">
             {% if page.previous %}
-            <a class="post-prev" href="{{ site.baseurl }}/{{ page.previous.url }}" title="{{ page.previous.title }}">{{ page.previous.title | truncate: 30 }}</a>
+            <a class="post-prev" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">{{ page.previous.title | truncate: 30 }}</a>
             {% endif %}
             {% if page.next %}
-            <a class="post-next" href="{{ site.baseurl }}/{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title | truncate: 30 }}</a>
+            <a class="post-next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title | truncate: 30 }}</a>
             {% endif %}
           </nav>
 
