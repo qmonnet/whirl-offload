@@ -3,6 +3,13 @@ layout: post
 title:  "Use cases for BEBA’s stateful packet processing"
 date:   2016-08-26
 author: Quentin Monnet
+excerpt: In previous articles I gave an overview of the BEBA research project,
+  and then of the OpenState abstraction layer that enables stateful packet
+  processing and has been developed as part of this project. I provided a
+  simple example, port knocking, to illustrate the concepts involved in this
+  design, but port knocking is not an essential network feature. So what would
+  one need stateful processing for? You are looking for example use cases?
+  Well, this is exactly what we present in this article!
 categories: BEBA
 tags: [BEBA, SDN]
 ---

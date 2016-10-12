@@ -3,6 +3,12 @@ layout: post
 title:  "BEBA research project: stateful processing for fast programmable switches"
 date:   2016-07-15
 author: Quentin Monnet
+excerpt: At 6WIND we work on accelerating packets for network equipments. As
+  for me, I work in the research and development team, and hence I realize
+  little development on our core products. Instead, I am currently working on a
+  European research project called BEBA. The name derives from BEhavioural
+  BAsed forwarding, and indeed it aims at providing stateful packet processing
+  capabilities to programmable switch.
 categories: BEBA
 tags: [BEBA, SDN]
 ---

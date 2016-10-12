@@ -3,6 +3,11 @@ layout: post
 title:  "An introduction to SDN"
 date:   2016-07-08
 author: Quentin Monnet
+excerpt: So here we are—this is the first article of this blog. As 6WIND's
+  products are closely related to what is called Software Defined Networking,
+  it made sense to me to start with some basic notions about this topic. Some
+  following articles should focus on my work on BEBA, a European research
+  project that aims at making programmable switches “faster and smarter”.
 categories: BEBA
 tags: [SDN]
 ---

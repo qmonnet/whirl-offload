@@ -3,6 +3,11 @@ layout: post
 title:  "OpenState: an abstraction design for stateful packet processing"
 date:   2016-07-17
 author: Quentin Monnet
+excerpt: This article is a brief presentation of the OpenState abstraction
+  layer for stateful packet processing for programmable switching. Did you ever
+  wonder how to model, for your network switches, complex applications that
+  behave differently based on the history of received traffic? No? (What? How
+  comes? You strange folks…) Well, here is a possible solution all the same!
 categories: BEBA
 tags: [BEBA, SDN]
 ---
