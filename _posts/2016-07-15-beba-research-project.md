@@ -57,7 +57,10 @@ stateful packet processing.
 4. [BEBA's use cases]({{ site.baseurl }}{% post_url
    2016-08-26-stateful-processing-use-cases %}), a description of some of the
    principle use cases defined in the project.
-5. Hopefully, more to come!
+5. [In-switch ARP]({{ site.baseurl }}{% post_url
+   2016-11-05-in-switch-arp-with-openstate %}) with OpenState, an additional
+   use case.
+6. Hopefully, more to come!
 
 {% comment %}
 These are work in progress, or simply post ideas

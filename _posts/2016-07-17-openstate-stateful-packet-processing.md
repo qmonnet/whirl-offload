@@ -164,10 +164,10 @@ by proposing an implementation of simplified _extended finite state machines
 (<acronym title="eXtended Finite State Machine">XFSM</acronym>)_, also known as
 [Mealy machines](https://en.wikipedia.org/wiki/Mealy_machine). A simplified
 Mealy machine in use with our model is an abstract structure comprising a
-4-tuple (S0, S, I, O, T), where: 
+5-tuple (S<sub>0</sub>, S, I, O, T), where:
 
 * S is a finite set of states.
-* S0 is an initial starting state S0, belonging to S.
+* S<sub>0</sub> is an initial starting state S<sub>0</sub>, belonging to S.
 * I is a finite set of input symbols (events).
 * O is a finite set of output symbols (actions).
 * T : S × I → S × O is a transition function mapping (state, event) pairs into
@@ -181,8 +181,8 @@ and of an action is associated. So, if I am a switch proposing port knocking
 features: if I am in state STEP\_3 and I receive a TCP packet on port 22, I go
 to a new state, OPEN, and I perform an action: I forward the packet to its
 recipient. If, on the contrary, I receive any other packet, or if the timeout
-fires, then the new state will be the initial state (S0), and the action
-consists in dropping the packet.
+fires, then the new state will be the initial state (S<sub>0</sub>), and the
+action consists in dropping the packet.
 
 That was for the formal definition. Now, how can we integrate these machines
 into the data plane?
@@ -334,7 +334,7 @@ machines, you may have guessed how the elements map to the Mealy machine
 components. Just to make it clear, let's sum up the association:
 
 * S is the set of states.
-* S0 is the initial state, DEFAULT in our example.
+* S<sub>0</sub> is the initial state, DEFAULT in our example.
 * I is the finite set of input symbols. It represents the events to match with
   the packet, such as “TCP dst port = 22”.
 * O is the finite set of output symbols: it is the set of the possible
