@@ -60,7 +60,10 @@ stateful packet processing.
 5. [In-switch ARP]({{ site.baseurl }}{% post_url
    2016-11-05-in-switch-arp-with-openstate %}) with OpenState, an additional
    use case.
-6. Hopefully, more to come!
+6. [Open Packet Processor]({{ site.baseurl }}{% post_url
+   2016-11-09-open-packet-processor %}), that extends OpenState with registers
+   and boolean conditions on the latter.
+7. Hopefully, more to come!
 
 {% comment %}
 These are work in progress, or simply post ideas
