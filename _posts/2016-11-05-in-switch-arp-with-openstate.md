@@ -179,6 +179,11 @@ BEBA's OpenState!
   deliverables](http://www.beba-project.eu/dissemination/public-deliverables)
   is the reference. For this use case, see in particular
   [deliverable D5.2][D5.2].
+* The mechanisms to generate packet “in-switch” and to handle FTEs and PTEs
+  are actually part of the InSPired switch design, also part of BEBA project:
+  [_Improving SDN with InSPired
+  Switches_](http://conferences.sigcomm.org/sosr/2016/papers/sosr_paper42.pdf),
+  Roberto Bifulco, Julien Boite, Mathieu Bouet and Fabian Schneider, 2016.
 
 [D5.2]: http://www.beba-project.eu/public_deliverables/BEBA_D5.2.pdf
 
