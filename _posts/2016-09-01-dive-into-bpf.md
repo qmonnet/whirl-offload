@@ -16,6 +16,8 @@ tags: [eBPF]
 * ToC
 {:toc}
 
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2016-11-24 ~_
+
 # What is BPF?
 
 BPF, as in **B**erkeley **P**acket **F**ilter, was initially conceived in 1992
@@ -119,17 +121,27 @@ Generic presentations about eBPF:
 * [_Extending extended BPF_](https://lwn.net/Articles/603983/)
   (Jonathan Corbet, July 2014)
 
-BPF internals:
+**BPF internals**:
 
-* [_Linux tc and eBPF_](https://archive.fosdem.org/2016/schedule/event/ebpf/attachments/slides/1159/export/events/attachments/ebpf/slides/1159/ebpf.pdf)
-  (Daniel Borkmann, fosdem16, January 2016)
+* Daniel Borkmann has been doing an amazing work to present **the internals** of eBPF, in particular about **its use with tc**, through several talks and papers.
+    * [*Advanced programmability and recent updates with tc's cls_bpf*](http://netdevconf.org/1.2/session.html?daniel-borkmann)
+      (netdev 1.2, Tokyo, October 2016):<br />
+      Daniel provides details on eBPF, its use for tunneling and encapsulation,
+      direct packet access, and other features.
+    * [*cls_bpf/eBPF updates since netdev 1.1*](http://netdevconf.org/1.2/slides/oct5/07_tcws_daniel_borkmann_2016_tcws.pdf)
+      (netdev 1.2, Tokyo, October 2016, part of
+      [this tc workshop](http://netdevconf.org/1.2/session.html?jamal-tc-workshop))
+    * [*On getting tc classifier fully programmable with cls_bpf*](http://www.netdevconf.org/1.1/proceedings/slides/borkmann-tc-classifier-cls-bpf.pdf)
+      (netdev 1.1, Sevilla, February 2016):<br />
+      After introducing eBPF, this presentation provides insights on many
+      internal BPF mechanisms (map management, tail calls, verifier). A
+      must-read! For the most ambitious,
+      [the full paper is available here](http://www.netdevconf.org/1.1/proceedings/papers/On-getting-tc-classifier-fully-programmable-with-cls-bpf.pdf).
+    * [_Linux tc and eBPF_](https://archive.fosdem.org/2016/schedule/event/ebpf/attachments/slides/1159/export/events/attachments/ebpf/slides/1159/ebpf.pdf)
+      (fosdem16, January 2016)
 
-* [*On getting tc classifier fully programmable with cls_bpf*](http://www.netdevconf.org/1.1/proceedings/slides/borkmann-tc-classifier-cls-bpf.pdf)
-  (Daniel Borkmann, netdev 1.1, Sevilla, February 2016):<br />
-  After introducing eBPF, this presentation provides insights on many **internal
-  BPF mechanisms** (map management, tail calls, verifier). A must-read! For the
-  most ambitious,
-  [the full paper is available here](http://www.netdevconf.org/1.1/proceedings/papers/On-getting-tc-classifier-fully-programmable-with-cls-bpf.pdf).
+  These presentations are probably one of the best sources of documentation to
+  understand the design and implementation of internal mechanisms of eBPF.
 
 The [**IO Visor blog**](https://www.iovisor.org/resources/blog) has some
 interesting technical articles about BPF. Some of them contain a bit of
@@ -155,11 +167,19 @@ or by browsing his blog.
 
 Introducing BPF, but also presenting **generic concepts of Linux networking**:
 
+* [_Linux Networking Explained_](http://www.slideshare.net/ThomasGraf5/linux-networking-explained)
+  (Thomas Graf, LinuxCon, Toronto, August 2016)
+
 * [_Kernel Networking Walkthrough_](http://www.slideshare.net/ThomasGraf5/linuxcon-2015-linux-kernel-networking-walkthrough)
   (Thomas Graf, LinuxCon, Seattle, August 2015)
 
-* [_Linux Networking Explained_](http://www.slideshare.net/ThomasGraf5/linux-networking-explained)
-  (Thomas Graf, LinuxCon, Toronto, August 2016)
+**Hardware offload**:
+
+* eBPF with tc or XDP supports hardware offload, starting with Linux kernel
+  version 4.9 and introduced by Netronome. Here is a presentation about this
+  feature:<br />
+  [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski)
+  (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016)
 
 About **cBPF**:
 
@@ -198,7 +218,14 @@ About **cBPF**:
 * [_XDP − eXpress Data Path, Intro and future use-cases_](http://people.netfilter.org/hawk/presentations/xdp2016/xdp_intro_and_use_cases_sep2016.pdf)
   (Jesper Dangaard Brouer, September 2016):<br />
   _“Linux Kernel’s fight against DPDK”_. **Future plans** (as of this writing)
-  for XDP and comparison with DPDK.
+  for XDP and comparison with DPDK. Additional hints about XDP internals and
+  expected evolution can be found in
+  [this workshop presentation](http://netdevconf.org/1.2/session.html?jesper-performance-workshop)
+  organized during netdev 1.2 (October 2016) by Jesper.
+
+* [_XDP workshop — Introduction, experience, and future development_](http://netdevconf.org/1.2/session.html?herbert-xdp-workshop)
+  (Tom Herbert, netdev 1.2, Tokyo, October 2016) — as of this writing, only the
+  video is available, I don't know if the slides will be added.
 
 ### About other components related or based on eBPF
 
@@ -208,8 +235,8 @@ About **cBPF**:
   with BPF to create high-performance programmable switches.
 
 * If you like audio presentations, there is an associated
-  [OVS Orbit episode (#11), called _**P4** on the Edge_](https://ovsorbit.benpfaff.org/#e11),
-  dating from August 2016. OVS Orbit are interviews realized by Ben Pfaff, who
+  [OvS Orbit episode (#11), called _**P4** on the Edge_](https://ovsorbit.benpfaff.org/#e11),
+  dating from August 2016. OvS Orbit are interviews realized by Ben Pfaff, who
   is one of the core maintainers of Open vSwitch. In this case, John Fastabend
   is interviewed.
 
@@ -218,32 +245,62 @@ About **cBPF**:
   Another presentation on **P4**, with some elements related to eBPF hardware
   offload on Netronome's **NFP** (Network Flow Processor) architecture.
 
+* **Cilium** is a technology initiated by Cisco and relying on BPF and XDP to
+  provide “fast in-kernel networking and security policy enforcement for
+  containers based on eBPF programs generated on the fly”.
+  [The code of this project](https://github.com/cilium/cilium)
+  is available on GitHub. Thomas Graf has been performing a number of
+  presentations of this topic:
+    * [_Cilium: Networking & Security for Containers with BPF & XDP_](http://www.slideshare.net/ThomasGraf5/clium-container-networking-with-bpf-xdp),
+      also featuring a load balancer use case
+      (Linux Plumbers conference, Santa Fe, November 2016)
+    * [_Cilium: Networking & Security for Containers with BPF & XDP_](http://www.slideshare.net/Docker/cilium-bpf-xdp-for-containers-66969823)
+      (Docker Distributed Systems Summit, October 2016 —
+      [video](https://www.youtube.com/watch?v=TnJF7ht3ZYc&list=PLkA60AVN3hh8oPas3cq2VA9xB7WazcIgs))
+    * [_Cilium: Fast IPv6 container Networking with BPF and XDP_](http://www.slideshare.net/ThomasGraf5/cilium-fast-ipv6-container-networking-with-bpf-and-xdp)
+      (LinuxCon, Toronto, August 2016)
+
+  A good deal of contents is repeated between the different presentations; if
+  in doubt, just pick the most recent one. Daniel Borkmann has also written
+  [a generic introduction to Cilium](https://opensource.googleblog.com/2016/11/cilium-networking-and-security.html)
+  as a guest author on Google Open Source blog.
+
+* There are also podcasts about **Cilium**: an
+  [OvS Orbit episode (#4)](https://ovsorbit.benpfaff.org/),
+  in which Ben Pfaff interviews Thomas Graf (May 2016), and
+  [another podcast by Ivan Pepelnjak](http://blog.ipspace.net/2016/10/fast-linux-packet-forwarding-with.html),
+  still with Thomas Graf about eBPF, P4, XDP and Cilium (October 2016).
+
+* **Open vSwitch** (OvS), and its related project **Open Virtual Network**
+  (OVN, an open source network virtualization solution) are considering to use
+  eBPF at various level, with several proof-of-concept prototypes already
+  implemented:<br >
+    * [Offloading OVS Flow Processing using eBPF](http://openvswitch.org/support/ovscon2016/7/1120-tu.pdf)
+      (William (Cheng-Chun) Tu, OvS conference, San Jose, November 2016)
+    * [Coupling the Flexibility of OVN with the Efficiency of IOVisor](http://openvswitch.org/support/ovscon2016/7/1245-bertrone.pdf)
+      (Fulvio Risso, Matteo Bertrone and Mauricio Vasquez Bernal, OvS
+      conference, San Jose, November 2016)
+
+  These use cases for eBPF seem to be only at the stage of proposals (nothing
+  merge to OvS main branch) as far as I know, but it will be very interesting
+  to see what comes out of it.
+
 * [_CETH for XDP_](http://www.slideshare.net/IOVisor/ceth-for-xdp-linux-meetup-santa-clara-july-2016)
   (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016):<br />
   **CETH** stands for Common Ethernet Driver Framework for faster network I/O,
   a technology initiated by Mellanox.
 
-* [_Cilium: Fast IPv6 container Networking with BPF and XDP_](http://www.slideshare.net/ThomasGraf5/cilium-fast-ipv6-container-networking-with-bpf-and-xdp)
-  (Thomas Graf, LinuxCon, Toronto, August 2016):<br />
-  **Cilium** is a technology initially created by Cisco and relying on BPF and
-  XDP to provide “fast in-kernel networking and security policy enforcement for
-  containers based on eBPF programs generated on the fly”.
-  [The code of this project](https://github.com/cilium/cilium)
-  is available on GitHub.
-
-* There is also an
-  [OVS Orbit episode (#4) about **Cilium**](https://ovsorbit.benpfaff.org/).
-  An interview of Thomas Graf, by Ben Pfaff (May 2016).
-
 * **Suricata**, an open source intrusion detection system,
   [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
-  for its “capture bypass” features.
+  for its “capture bypass” features:<br />
+  [_The adventures of a Suricate in eBPF land_](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf)
+  (Éric Leblond, netdev 1.2, Tokyo, October 2016)
 
 * [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
   (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
   **InKeV** is an eBPF-based datapath architecture for virtual networks,
   targeting data center networks. It was initiated by PLUMgrid, and claims to
-  achieve better performances than OVS-based OpenStack solutions.
+  achieve better performances than OvS-based OpenStack solutions.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/book.svg"/>
@@ -291,9 +348,11 @@ need and read them carefully!
   reference for **using BPF with tc**, and includes some example commands and
   samples of code.
 
-* [A **list of BPF features per kernel version**][kernfeatures]
-  is available in bcc repository. Useful is you want to know the minimal kernel
-  version that is required to run a given feature.
+* [A **list of BPF features per kernel version**][kernfeatures] is available in
+  bcc repository. Useful is you want to know the minimal kernel version that is
+  required to run a given feature. I contributed and added the links to the
+  commits that introduced each feature, so you can also easily access the
+  commit logs from there.
 
 [filter.txt]: https://www.kernel.org/doc/Documentation/networking/filter.txt
 [refguide]: https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md
@@ -323,6 +382,11 @@ generic functioning. Here are a couple of resources about it.
   itself: the package contains [some documentation](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/doc),
   including some files that helped me understand better
   [the functioning of **tc's actions**](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions).
+
+* Not exactly documentation: there was
+  [a workshop about several tc features](http://netdevconf.org/1.2/session.html?jamal-tc-workshop)
+  (including filtering, BPF, tc offload, …) organized by Jamal Hadi Salim
+  during the netdev 1.2 conference (October 2016).
 
 * Bonus information—If you use `tc` a lot, here are some good news: I [wrote a
   bash completion
@@ -551,17 +615,27 @@ as well as
 can be used as alternatives to the C subset and (in the case of Lua) to the
 Python tools.
 
+### LLVM backend
+
+The BPF backend used by clang / LLVM for compiling C into eBPF was added to the
+LLVM sources in
+[this commit](https://reviews.llvm.org/D6494)
+(and can also be accessed on
+[the GitHub mirror](https://github.com/llvm-mirror/llvm/commit/4fe85c75482f9d11c5a1f92a1863ce30afad8d0d).
+
 ### Commit logs
 
-As stated earlier, do not hesitate to have a look at the commit log that introduced a particular
-BPF feature if you want to have more information about it. You can search the
-logs in many places, such as on
+As stated earlier, do not hesitate to have a look at the commit log that
+introduced a particular BPF feature if you want to have more information about
+it. You can search the logs in many places, such as on
 [git.kernel.org](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git),
 [on GitHub](https://github.com/torvalds/linux), or on your local
 repository if you have cloned it. If you are not familiar with git, try things
 like `git blame <file>` to see what commit introduced a particular line of
 code, then `git show <commit>` to have details (or search by keyword in `git
-log` results, but this may be tedious).
+log` results, but this may be tedious). See also [the list of eBPF features per
+kernel version][kernfeatures] on bcc repository, that links to relevant
+commits.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/wand.svg"/>
