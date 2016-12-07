@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2016-11-24 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2016-12-07 ~_
 
 # What is BPF?
 
@@ -186,6 +186,9 @@ About **cBPF**:
 * [_The BSD Packet Filter: A New Architecture for User-level Packet Capture_](http://www.tcpdump.org/papers/bpf-usenix93.pdf)
   (Steven McCanne and Van Jacobson, 1992):<br />
   The original paper about (classic) BPF.
+
+* [The FreeBSD manual page about BPF](http://www.gsp.com/cgi-bin/man.cgi?topic=bpf)
+  is a useful resource to understand cBPF programs.
 
 * Daniel Borkmann realized at least two presentations on cBPF,
   [one in 2013 on mmap, BPF and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf), and
@@ -720,6 +723,15 @@ BPF.
   messages](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md#output)
   for debugging the code.
 
+* LLVM v4.0+
+  [embeds a disassembler](https://www.spinics.net/lists/netdev/msg406926.html)
+  for eBPF programs. So if you compile your program with clang, adding the `-g`
+  flag for compiling enables you to later dump your program in the rather
+  human-friendly format used by the kernel verifier. To proceed to the dump,
+  use:
+
+      $ llvm-objdump -S -no-show-raw-insn bpf_program.o
+
 * There is an old
   [`bpf` tag on **StackOverflow**](https://stackoverflow.com/questions/tagged/bpf),
   but as of this writing it has been hardly used—ever (and there is nearly
@@ -734,7 +746,9 @@ BPF.
 ## And still more!
 
 * In case you would like to easily **test XDP**, there is
-  [a Vagrant setup](https://github.com/iovisor/xdp-vagrant) available.
+  [a Vagrant setup](https://github.com/iovisor/xdp-vagrant) available. You can
+  also **test bcc**
+  [in a Docker container](https://github.com/zlim/bcc-docker).
 
 * Wondering where the **development and activities** around BPF occur? Well,
   the kernel patches always end up
