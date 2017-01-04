@@ -246,7 +246,7 @@ packet, the table returns the current state associated to the flow. Then once
 we know this state, the _XFSM table_ is scanned. The matching row is the one
 for which the first (_State_) column is matched by the current flow state (e.g.
 STEP\_1) _and_ the second (_Event_) column is matched by the packet (e.g. TCP
-dst port = 2222.
+dst port = 2222).
 
 The second bloc of columns gathers two columns, _Action_ and _Next state_. So
 once the matching row has been determined with the state and events associated
