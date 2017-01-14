@@ -182,7 +182,7 @@ Indeed:
   returns the next state on which the transition is to end, the action to
   perform (drop, forward…), and a set of custom algorithmic and logics
   instructions used to update the registers.
-* The update logic bloc is a parallel array of ALUs: it executes the
+* The update logic block is a parallel array of ALUs: it executes the
   microinstructions returned by the TCAM in order to update the registers.
 
 In fact, the model uses the TCAM as the processing unit: it kind of replaces a

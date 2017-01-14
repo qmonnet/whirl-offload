@@ -210,7 +210,7 @@ following states:
 * STEP\_1; or STEP\_2, or STEP\_3: the port knocking sequence is ongoing.
 
 For 10.1.1.1 and 10.2.2.2, the state is always OPEN. But for 10.3.3.3, it depends
-on the progress of the secret sequence, so the state may evolve. SO **the state
+on the progress of the secret sequence, so the state may evolve. So **the state
 table itself can evolve, without the intervention of the controller**: this is
 precisely the way we can track the succession of states.
 
@@ -237,7 +237,7 @@ switch associate state OPEN to the actual “forwarding” action? The solution 
 these questions resides in the use of another table, called _<acronym
 title="eXtended Finite State Machine">XFSM</acronym> table_.
 
-This table has two main blocs: _Flow matching pattern_ and _Actions_. The
+This table has two main blocks: _Flow matching pattern_ and _Actions_. The
 former is subdivided into two columns: _State_ and _Event_. The _State_ is a
 state name, like OPEN or DEFAULT. The _Event_ is a traditional pattern that a
 packet can match. The principle is the following: when a packet is received,
@@ -248,7 +248,7 @@ for which the first (_State_) column is matched by the current flow state (e.g.
 STEP\_1) _and_ the second (_Event_) column is matched by the packet (e.g. TCP
 dst port = 2222).
 
-The second bloc of columns gathers two columns, _Action_ and _Next state_. So
+The second block of columns gathers two columns, _Action_ and _Next state_. So
 once the matching row has been determined with the state and events associated
 to the packet, the corresponding action, found in the third column, is applied
 (e.g. Drop); and at last the state for this flow is modified, as indicated by
@@ -342,8 +342,8 @@ components. Just to make it clear, let's sum up the association:
 * T : S × I → S × O maps a pair (state, event) with another pair (state,
   action). In fact, this is exactly what the _<acronym title="eXtended Finite
   State Machine">XFSM</acronym> table_ does: the first pair is an element of
-  the _Flow matching pattern_ column bloc, and the two last cells of this row
-  that belong to the _Actions_ bloc are associated to it.
+  the _Flow matching pattern_ column block, and the two last cells of this row
+  that belong to the _Actions_ block are associated to it.
 
 ## About the actions
 
