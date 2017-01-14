@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2016-12-07 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2017-09-01-dive-into-bpf.md) 2017-01-14 ~_
 
 # What is BPF?
 
@@ -626,6 +626,17 @@ LLVM sources in
 (and can also be accessed on
 [the GitHub mirror](https://github.com/llvm-mirror/llvm/commit/4fe85c75482f9d11c5a1f92a1863ce30afad8d0d).
 
+### Running in userspace
+
+As far as I know there are at least two eBPF userspace implementations. The
+first one, [uBPF](https://github.com/iovisor/ubpf/), is written in C. It
+contains an interpreter, a JIT compiler for x86_64 architecture, an assembler
+and a disassembler.
+
+The second one is my own work: [rbpf](https://github.com/qmonnet/rbpf), based
+on uBPF, but written in Rust. The interpreter and JIT-compiler work, there may
+be more in the future.
+
 ### Commit logs
 
 As stated earlier, do not hesitate to have a look at the commit log that
@@ -731,6 +742,11 @@ BPF.
   use:
 
       $ llvm-objdump -S -no-show-raw-insn bpf_program.o
+
+* Working with maps? You want to have a look at
+  [bpf-map](https://github.com/cilium/bpf-map), a very userful tool in Go
+  created for the Cilium project, that can be used to dump the contents of
+  kernel eBPF maps.
 
 * There is an old
   [`bpf` tag on **StackOverflow**](https://stackoverflow.com/questions/tagged/bpf),
