@@ -263,7 +263,7 @@ Processor is definitely meant to be part of it!
   Marco Bonola, Salvatore Pontarelli, Davide Sanvito, Antonio Capone, Carmelo
   Cascone — 2016.
 * The model is also described in one of the project's deliverables,
-  [D2.3](http://www.beba-project.eu/public_deliverables/BEBA_D4.3.pdf),
+  [D2.3](http://www.beba-project.eu/public_deliverables/BEBA_D2.3_final_reviewed.pdf),
   accessible from [BEBA's list of public
   deliverables](http://www.beba-project.eu/dissemination/public-deliverables).
 * [Extended finite state
