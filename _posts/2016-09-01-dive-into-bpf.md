@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2017-09-01-dive-into-bpf.md) 2017-02-06 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-02-06 ~_
 
 # What is BPF?
 
