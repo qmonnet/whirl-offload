@@ -363,6 +363,12 @@ need and read them carefully!
   reference for **using BPF with tc**, and includes some example commands and
   samples of code.
 
+* Jesper Dangaard Brouer initiated an attempt to update eBPF documentation,
+  including the different kinds of maps.
+  [He has a draft](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html)
+  to which contributions are welcome. Once ready, this document should be
+  merged into the man pages and into kernel documentation.
+
 * [A **list of BPF features per kernel version**][kernfeatures] is available in
   bcc repository. Useful is you want to know the minimal kernel version that is
   required to run a given feature. I contributed and added the links to the
