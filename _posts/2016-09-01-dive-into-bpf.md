@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2017-09-01-dive-into-bpf.md) 2017-01-14 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2017-09-01-dive-into-bpf.md) 2017-02-06 ~_
 
 # What is BPF?
 
@@ -138,7 +138,9 @@ Generic presentations about eBPF:
       must-read! For the most ambitious,
       [the full paper is available here](http://www.netdevconf.org/1.1/proceedings/papers/On-getting-tc-classifier-fully-programmable-with-cls-bpf.pdf).
     * [_Linux tc and eBPF_](https://archive.fosdem.org/2016/schedule/event/ebpf/attachments/slides/1159/export/events/attachments/ebpf/slides/1159/ebpf.pdf)
-      (fosdem16, January 2016)
+      (fosdem16, Brussels, Belgium, January 2016)
+    * [_eBPF and XDP walkthrough and recent updates_](https://fosdem.org/2017/schedule/event/ebpf_xdp/)
+      (fosdem17, Brussels, Belgium, February 2017)
 
   These presentations are probably one of the best sources of documentation to
   understand the design and implementation of internal mechanisms of eBPF.
@@ -262,6 +264,8 @@ About **cBPF**:
       [video](https://www.youtube.com/watch?v=TnJF7ht3ZYc&list=PLkA60AVN3hh8oPas3cq2VA9xB7WazcIgs))
     * [_Cilium: Fast IPv6 container Networking with BPF and XDP_](http://www.slideshare.net/ThomasGraf5/cilium-fast-ipv6-container-networking-with-bpf-and-xdp)
       (LinuxCon, Toronto, August 2016)
+    * [_Cilium: BPF & XDP for containers_](https://fosdem.org/2017/schedule/event/cilium/)
+      (fosdem17, Brussels, Belgium, February 2017)
 
   A good deal of contents is repeated between the different presentations; if
   in doubt, just pick the most recent one. Daniel Borkmann has also written
@@ -304,6 +308,14 @@ About **cBPF**:
   **InKeV** is an eBPF-based datapath architecture for virtual networks,
   targeting data center networks. It was initiated by PLUMgrid, and claims to
   achieve better performances than OvS-based OpenStack solutions.
+
+* [_**gobpf** - utilizing eBPF from Go_](https://fosdem.org/2017/schedule/event/go_bpf/)
+  (Michael Schubert, fosdem17, Brussels, Belgium, February 2017):<br />
+  A “library to create, load and use eBPF programs from Go”
+
+* If you read my previous article, you might be interested in this talk I gave
+  about [implementing the OpenState interface with eBPF](https://fosdem.org/2017/schedule/event/stateful_ebpf/),
+  for stateful packet processing, at fosdem17.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/book.svg"/>
@@ -414,9 +426,10 @@ can be compiled for a number of hardware or software targets. As you may have
 guessed, one of these targets is BPF… The support is only partial: some P4
 features cannot be translated towards BPF, and in a similar way there are
 things that BPF can do but that would not be possible to express with P4.
-Anyway,
-[the documentation related to **P4 use with BPF**](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4)
-is hidden in bcc repository.
+Anyway, the documentation related to **P4 use with BPF**
+[used to be hidden in bcc repository](https://github.com/iovisor/bcc/tree/master/src/cc/frontends/p4).
+This changed with P4_16 version, the p4c reference compiler including
+[a backend for eBPF](https://github.com/p4lang/p4c/blob/master/backends/ebpf/README.md).
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/flask.svg"/>
@@ -585,14 +598,16 @@ into the kernel, happens
 ### Code to manage BPF with tc
 
 The code related to BPF **in tc** comes with the iproute2 package, of course.
-Everything is under the
+Some of it is under the
 [iproute2/tc/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/tc)
 directory. The files f\_bpf.c and m\_bpf.c (and e\_bpf.c) are used respectively
 to handle BPF filters and actions (and tc `exec` command, whatever this may
-be). But **most of the BPF userspace logic** is implemented in the tc\_bpf.c
-file, so this is probably where you should head to if you want to mess up with
-BPF and tc. There is a last file related to BPF: this is q\_clsact.c, that
-defines the `clsact` qdisc especially created for BPF.
+be). File q\_clsact.c defines the `clsact` qdisc especially created for BPF.
+But **most of the BPF userspace logic** is implemented in
+[iproute2/lib/bpf.c](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/lib/bpf.c)
+library, so this is probably where you should head to if you want to mess up
+with BPF and tc (it was moved from file iproute2/tc/tc_bpf.c, where you may
+find the same code in older versions of the package).
 
 ### BPF utilities
 
@@ -624,7 +639,7 @@ The BPF backend used by clang / LLVM for compiling C into eBPF was added to the
 LLVM sources in
 [this commit](https://reviews.llvm.org/D6494)
 (and can also be accessed on
-[the GitHub mirror](https://github.com/llvm-mirror/llvm/commit/4fe85c75482f9d11c5a1f92a1863ce30afad8d0d).
+[the GitHub mirror](https://github.com/llvm-mirror/llvm/commit/4fe85c75482f9d11c5a1f92a1863ce30afad8d0d)).
 
 ### Running in userspace
 
