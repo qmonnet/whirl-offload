@@ -100,6 +100,10 @@ lower down in the list.
 
 Generic presentations about eBPF:
 
+* [_BPF: tracing and more_](http://www.slideshare.net/brendangregg/bpf-tracing-and-more)
+  (Brendan Gregg, January 2017):<br />
+  Mostly about the tracing use cases.
+
 * [_Linux BPF Superpowers_](http://fr.slideshare.net/brendangregg/linux-bpf-superpowers)
   (Brendan Gregg, March 2016):<br />
   With a first part on the use of **flame graphs**.
@@ -450,6 +454,10 @@ comes with eleven steps (as of today) to understand how to use the existing
 tools, while
 [the one **intended for Python developers**](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md)
 focuses on developing new tools, across seventeen “lessons”.
+
+Sasha Goldshtein also has some
+[_**Linux Tracing Workshops Materials**_](https://github.com/goldshtn/linux-tracing-workshop)
+involving the use of several BPF tools for tracing.
 
 Sadly, as of this writing, there are no tutorials yet on the networking part.
 
