@@ -200,6 +200,12 @@ About **cBPF**:
   [one in 2013 on mmap, BPF and Netsniff-NG](http://borkmann.ch/talks/2013_devconf.pdf), and
   [a very complete one in 2014 on tc and cls\_bpf](http://borkmann.ch/talks/2014_devconf.pdf).
 
+* On Cloudflare's blog, Marek Majkowski presented his
+  [use of BPF bytecode with the `xt_bpf` module for **iptables**](https://blog.cloudflare.com/introducing-the-bpf-tools/).
+  It is worth mentioning that eBPF is also supported by this module, starting
+  with Linux kernel 4.10 (I do not know of any talk or article about this,
+  though).
+
 * [Libpcap filters syntax](http://biot.com/capstats/bpf.html)
 
 ### About XDP
