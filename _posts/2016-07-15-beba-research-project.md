@@ -63,7 +63,11 @@ stateful packet processing.
 6. [Open Packet Processor]({{ site.baseurl }}{% post_url
    2016-11-09-open-packet-processor %}), that extends OpenState with registers
    and boolean conditions on the latter.
-7. Hopefully, more to come!
+7. [OpenState with eBPF]({{ site.baseurl }}{% post_url
+   2017-02-21-implementing-openstate-with-ebpf %}), providing some details
+   about my implementation of two use cases (port knocking and token bucket)
+   for OpenState and Open Packet Processor, with eBPF.
+8. Hopefully, more to come!
 
 {% comment %}
 These are work in progress, or simply post ideas

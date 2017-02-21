@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1097.1836"
+   height="383.797"
+   viewBox="0 0 1097.1836 383.797"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="components.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="-93.96392"
+     inkscape:cy="190.01262"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     fit-margin-top="0"
+     fit-margin-left="150"
+     fit-margin-right="150"
+     fit-margin-bottom="0"
+     inkscape:window-width="1884"
+     inkscape:window-height="1051"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="true"
+     units="px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(56.34668,-508.39447)">
+    <g
+       id="g89088">
+      <path
+         d="m 705.58087,511.39447 a 64.649765,188.8985 0 0 1 64.64977,188.8985 64.649765,188.8985 0 0 1 -64.64977,188.8985"
+         sodipodi:end="1.5707963"
+         sodipodi:start="4.712389"
+         sodipodi:ry="188.8985"
+         sodipodi:rx="64.649765"
+         sodipodi:cy="700.29297"
+         sodipodi:cx="705.58087"
+         sodipodi:type="arc"
+         id="path88993"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#572a79;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:open="true" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text88995"
+         y="643.95538"
+         x="843.7406"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#572a79;fill-opacity:1"
+           y="643.95538"
+           x="843.7406"
+           id="tspan88997"
+           sodipodi:role="line">BEBA</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;fill:#572a79;fill-opacity:1"
+           id="tspan88999"
+           y="687.70538"
+           x="843.7406"
+           sodipodi:role="line">switch</tspan></text>
+    </g>
+    <g
+       id="g4186">
+      <g
+         style="fill:#29506d;fill-opacity:1;stroke:none"
+         id="g4198-3"
+         transform="translate(66.219101,375.58839)">
+        <rect
+           style="fill:#29506d;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="rect4175-6"
+           width="294.96454"
+           height="188.89851"
+           x="27.434219"
+           y="324.70459"
+           ry="41.416256" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text84704"
+         y="788.82568"
+         x="241.13805"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#ffffff;fill-opacity:1"
+           y="788.82568"
+           x="241.13805"
+           id="tspan84706"
+           sodipodi:role="line">OpenState</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#ffffff;fill-opacity:1"
+           id="tspan84730"
+           y="820.40118"
+           x="241.13805"
+           sodipodi:role="line">(stateful processing)</tspan></text>
+    </g>
+    <g
+       id="g4227"
+       transform="translate(0.75917053,116.70307)">
+      <g
+         id="g4198-7"
+         transform="translate(382.42299,258.88532)">
+        <rect
+           style="fill:#609732;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="rect4175-5"
+           width="294.96454"
+           height="188.89851"
+           x="27.434219"
+           y="324.70459"
+           ry="41.416256" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text84720"
+         y="672.12268"
+         x="557.34192"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#ffffff;fill-opacity:1"
+           y="672.12268"
+           x="557.34192"
+           id="tspan84722"
+           sodipodi:role="line">InSP</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#ffffff;fill-opacity:1"
+           id="tspan84726"
+           y="703.69818"
+           x="557.34192"
+           sodipodi:role="line">(packet generation)</tspan></text>
+    </g>
+    <g
+       id="g4177">
+      <g
+         transform="translate(224.70062,186.68988)"
+         style="fill:#eab700;fill-opacity:1"
+         id="g4198">
+        <rect
+           style="fill:#eab700;fill-opacity:1;stroke:none;stroke-width:10;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+           id="rect4175"
+           width="294.96454"
+           height="188.89851"
+           x="27.434219"
+           y="324.70459"
+           ry="41.416256" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text84714"
+         y="566.07361"
+         x="399.56766"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#000000;fill-opacity:1"
+           y="566.07361"
+           x="399.56766"
+           id="tspan84716"
+           sodipodi:role="line">Open Packet</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#000000;fill-opacity:1"
+           id="tspan84718"
+           y="609.82361"
+           x="399.56766"
+           sodipodi:role="line">Processor</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#000000;fill-opacity:1"
+           id="tspan84732"
+           y="641.39917"
+           x="399.56766"
+           sodipodi:role="line">(registers and</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';fill:#000000;fill-opacity:1"
+           id="tspan84736"
+           y="669.52417"
+           x="399.56766"
+           sodipodi:role="line">boolean conditions)</tspan></text>
+    </g>
+  </g>
+</svg>
