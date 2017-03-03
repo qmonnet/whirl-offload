@@ -118,8 +118,9 @@ Full title was:
 Under this descriptive headline hides a brief introduction to Weave Scope, and
 to the use case it constitutes for eBPF.
 
-[Weave Scope](https://www.weave.works/products/weave-scope/) is a proprietary
-solution for container managing and monitoring. The website says:
+[Weave Scope](https://www.weave.works/products/weave-scope/) is an Open Source
+solution for container managing and monitoring, available [on
+GitHub](https://github.com/weaveworks/scope). The website says:
 
 > Zero configuration or integration required — just launch Weave Scope and go!
 > Automatically detects processes, containers, hosts. No kernel modules, no
@@ -169,10 +170,9 @@ example](https://github.com/weaveworks/tcptracer-bpf).
 Alban went on and presented Kinvolk's work on
 [ebpf-cgroups](https://github.com/kinvolk/cgroup-ebpf), a frontend leveraging
 the eBPF capacity to get attached to cgroups. If I understood correctly, they
-use it with
-[Prometheus](https://www.weave.works/solution/prometheus-monitoring/), a
-proprietary tool using “metrics-based time series database for monitoring”, to
-indeed monitor Kubernetes nodes.
+use it with [Prometheus](https://prometheus.io/), an Open Source tool using
+“metrics-based time series database for monitoring”, to indeed monitor
+Kubernetes nodes.
 
 They seem to be using
 [LRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU) eBPF hash
