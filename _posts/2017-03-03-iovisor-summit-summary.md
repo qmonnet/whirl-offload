@@ -99,7 +99,7 @@ should include:
 * Work on visualizations (flame graphs etc.)
 
 There was some question about having bcc on OS X I believe? But I could not
-here the answer. Other questions I did not understand. Personally, I asked
+hear the answer. Other questions I did not understand. Personally, I asked
 about plans to add new tutorials or tools related to networking aspects in bcc.
 It seems that Brendan leaves it to people working on networking stuff (so, not
 from him I get).
@@ -458,7 +458,7 @@ forwarding to any port with XDP (not yet supported in kernel), broadcasting or
 cloning packets (same problem as everyone else), recirculation, and providing
 more use cases. This seems good (sorry, couldn't help!).
 
-There was a question I wanted to ask: is this possible to have it the other way
+There was a question I wanted to ask: is it possible to have it the other way
 round, to compile eBPF to P4 in order to program ASICs? I asked on the chat,
 but the question was noticed too late to be answered: the next talk had already
 begun. Too bad, maybe next time!
@@ -470,8 +470,8 @@ begun. Too bad, maybe next time!
 * _Nikita Shirokov, Production Engineer at Facebook_
 * _Huapeng Zhou, Software Engineer at Facebook_
 
-This was a four-in-one presentation about use several use cases for XDP at
-Facebook and Versa Networks:
+This was a four-in-one presentation about several use cases for XDP at Facebook
+and Versa Networks:
 
 * Protection against Distributed Denial of Service (DDoS) attacks, by Huapeng
   Zhou.
@@ -525,10 +525,10 @@ We stay on load balancing with this one.
 [IPVS](https://en.wikipedia.org/wiki/IP_Virtual_Server) is a L4 load balancing
 feature available from the Linux Kernel, and based on Netfilter. Here it is
 described as “too generic”, hard to extend. The speaker also explains that XDP
-brings much better performances: the tests performed show that can do between 3
-and 6 times better with high (99%) cache hit, and 10 times, or even up to 25
-times (without session tracking) when the cache hit is at 0%. Impressive
-figures!
+brings much better performances: the tests performed show that it can do
+between 3 and 6 times better with high (99%) cache hit, and 10 times, or even
+up to 25 times (without session tracking) when the cache hit is at 0%.
+Impressive figures!
 
 ## ILA router
 
@@ -585,7 +585,7 @@ would any other driver, except this one is used to extract the eBPF code from
 tc of XDP hook (they are working on XDP offload).
 
 Regarding the offload, Nick insisted on the fact they did not want to focus on
-_what_ to offload, but instead of _how_ to offload eBPF stuff, to avoid
+_what_ to offload, but instead on _how_ to offload eBPF stuff, to avoid
 whack-a-mole problems. As I take it, this means you are pretty free to offload
 any eBPF stuff you want, since Netronome has designed a nice workflow to do
 that.
@@ -601,8 +601,7 @@ board, for example).
 Then the program is JIT-compiled, and sent to the board _via_ PCIe, where it
 can be executed as it would be in the kernel. But on dedicated hardware. XDP is
 fast, XDP on hardware sounds… pretty awesome. They get about 3 Mpps per FPC for
-write
-+ redirect operations, and just a bit less for read + write operations.
+write \+ redirect operations, and just a bit less for read \+ write operations.
 
 All of this was already in at least one earlier presentation by Netronome. What
 was new however was their detailed plans regarding maps. They intend to share
@@ -656,12 +655,12 @@ map themselves can be tied to a process as well as pinned on the file system…
 All of this makes it difficult to somehow find a way to unify eBPF program and
 maps handling. While this does not seem to be a major limitation when using a
 single tracing tool or networking feature, this may become a handicap when
-trying to coupling more complex IO Modules, or to use for example programs on
+trying to couple more complex IO Modules, or to use for example programs on
 cgroup and tc and kprobes at the same time… This is what libiov tries to solve.
 
 This is based on a model with “events”, “actions” and “buses”. It seems to be
 described with more details on the GitHub repository. The buses seem to be used
-as an intermediary between events and actions: it is possible to register to
+as an intermediary between events and actions: it is possible to subscribe to
 events (that are sent on the buses), and to describe actions to perform on
 those buses (such as `filter()` or `notify()`).
 
