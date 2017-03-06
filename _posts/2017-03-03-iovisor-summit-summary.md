@@ -286,7 +286,7 @@ presentation.
 * _Joe Stringer, Software Engineer at VMware_
 
 The Open vSwitch (OvS) team has been looking at eBPF for a while, and several
-patches have already been submitted to clean the path in that direction.
+patches have already been written to clean the path in that direction.
 
 The objective is to get better performances, more flexibility and more
 stability. The principle leading the transition is: implement datapath in eBPF,
@@ -315,9 +315,14 @@ There were a lot of discussions here, in particular about the “tuple space
 search table” (to replace flow table; not yet in the kernel as far as I know),
 but I could not grasp much of the discussion.
 
-Someone asked about the upcoming work on the topic. So apparently there are
-some patches in OvS already, and more to add (but first to review in details).
-I suppose some of those open issues will have to be answered somehow.
+Someone asked about the upcoming work on the topic. From what I heard (and from
+what Joe later told me by email, thanks!), there is a number of patches that
+already exist to implement some basic features of this eBPF datapath, not
+pushed yet. People work on their private trees for now and, quoting Joe,
+“Probably when [they] get something that implements a pretty reasonable amount
+of the OvS functionality [they] will start pushing out to the lists for further
+comments and review”. And of course, there are those open issues to fix one way
+or another.
 
 This is really interesting to see some production-oriented software such as
 OvS, which is the reference for virtual switching in the industry, slowly turn
