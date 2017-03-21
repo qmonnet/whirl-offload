@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-02-06 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-03-21 ~_
 
 # What is BPF?
 
@@ -230,17 +230,34 @@ About **cBPF**:
 
   (Tests performed with the mlx4 driver).
 
-* [_XDP − eXpress Data Path, Intro and future use-cases_](http://people.netfilter.org/hawk/presentations/xdp2016/xdp_intro_and_use_cases_sep2016.pdf)
-  (Jesper Dangaard Brouer, September 2016):<br />
-  _“Linux Kernel’s fight against DPDK”_. **Future plans** (as of this writing)
-  for XDP and comparison with DPDK. Additional hints about XDP internals and
-  expected evolution can be found in
-  [this workshop presentation](http://netdevconf.org/1.2/session.html?jesper-performance-workshop)
-  organized during netdev 1.2 (October 2016) by Jesper.
+* Jesper Dangaard Brouer has several excellent sets of slides, that are
+  essential to fully understand the internals of XDP.
+  * [_XDP − eXpress Data Path, Intro and future use-cases_](http://people.netfilter.org/hawk/presentations/xdp2016/xdp_intro_and_use_cases_sep2016.pdf)
+    (September 2016):<br />
+    _“Linux Kernel’s fight against DPDK”_. **Future plans** (as of this
+    writing) for XDP and comparison with DPDK.
+  * [_Network Performance Workshop_](http://netdevconf.org/1.2/session.html?jesper-performance-workshop)
+    (netdev 1.2, Tokyo, October 2016):<br />
+    Additional hints about XDP internals and expected evolution.
+  * [_XDP – eXpress Data Path, Used for DDoS protection_](http://people.netfilter.org/hawk/presentations/OpenSourceDays2017/XDP_DDoS_protecting_osd2017.pdf),
+    (OpenSourceDays, March 2017):<br />
+    Contains details and use cases about XDP, with **benchmark results**, and
+    **code snippets** for **benchmarking** as well as for **basic DDoS
+    protection** with eBPF/XDP (based on an IP blacklisting scheme).
+  * [_Memory vs. Networking, Provoking and fixing memory bottlenecks_](http://people.netfilter.org/hawk/presentations/MM-summit2017/MM-summit2017-JesperBrouer.pdf)
+    (LSF Memory Management Summit, March 2017):<br />
+    Provides a lot of details about current **memory issues** faced by XDP
+    developers. Do not start with this one, but if you already know XDP and
+    want to see how it really works on the page allocation side, this is a very
+    helpful resource.
+
+  (Jesper also created and tries to extend some documentation about eBPF and
+  XDP, see [related section](#about-xdp-1).)
 
 * [_XDP workshop — Introduction, experience, and future development_](http://netdevconf.org/1.2/session.html?herbert-xdp-workshop)
   (Tom Herbert, netdev 1.2, Tokyo, October 2016) — as of this writing, only the
   video is available, I don't know if the slides will be added.
+
 
 ### About other components related or based on eBPF
 
@@ -322,6 +339,11 @@ About **cBPF**:
 * [_**gobpf** - utilizing eBPF from Go_](https://fosdem.org/2017/schedule/event/go_bpf/)
   (Michael Schubert, fosdem17, Brussels, Belgium, February 2017):<br />
   A “library to create, load and use eBPF programs from Go”
+
+* [**ply**](https://wkz.github.io/ply/) is a small but flexible open source
+  dynamic **tracer** for Linux, with some features similar to the bcc tools,
+  but with a simpler language inspired by awk and dtrace, written by Tobias
+  Waldekranz.
 
 * If you read my previous article, you might be interested in this talk I gave
   about [implementing the OpenState interface with eBPF](https://fosdem.org/2017/schedule/event/stateful_ebpf/),
@@ -781,7 +803,8 @@ BPF.
 * Working with maps? You want to have a look at
   [bpf-map](https://github.com/cilium/bpf-map), a very userful tool in Go
   created for the Cilium project, that can be used to dump the contents of
-  kernel eBPF maps.
+  kernel eBPF maps. There also exists
+  [a clone](https://github.com/badboy/bpf-map) in Rust.
 
 * There is an old
   [`bpf` tag on **StackOverflow**](https://stackoverflow.com/questions/tagged/bpf),
