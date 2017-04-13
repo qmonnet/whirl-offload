@@ -26,7 +26,7 @@ from kernel to userspace. It initially consisted in a simple bytecode that is
 injected from userspace into the kernel, where it is checked by a verifier—to
 prevent kernel crashes or security issues—and attached to a socket, then run on
 each received packet. It was ported to Linux a couple of years later, and used
-for a small of applications (tcpdump for example). The simplicity of the
+for a small number of applications (tcpdump for example). The simplicity of the
 language as well as the existence of an in-kernel Just-In-Time (JIT) compiling
 machine for BPF were factors for the excellent performances of this tool.
 
