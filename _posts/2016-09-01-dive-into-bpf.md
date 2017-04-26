@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-03-21 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-04-26 ~_
 
 # What is BPF?
 
@@ -239,7 +239,7 @@ About **cBPF**:
   * [_Network Performance Workshop_](http://netdevconf.org/1.2/session.html?jesper-performance-workshop)
     (netdev 1.2, Tokyo, October 2016):<br />
     Additional hints about XDP internals and expected evolution.
-  * [_XDP – eXpress Data Path, Used for DDoS protection_](http://people.netfilter.org/hawk/presentations/OpenSourceDays2017/XDP_DDoS_protecting_osd2017.pdf),
+  * [_XDP – eXpress Data Path, Used for DDoS protection_](http://people.netfilter.org/hawk/presentations/OpenSourceDays2017/XDP_DDoS_protecting_osd2017.pdf)
     (OpenSourceDays, March 2017):<br />
     Contains details and use cases about XDP, with **benchmark results**, and
     **code snippets** for **benchmarking** as well as for **basic DDoS
@@ -250,6 +250,11 @@ About **cBPF**:
     developers. Do not start with this one, but if you already know XDP and
     want to see how it really works on the page allocation side, this is a very
     helpful resource.
+  * [_XDP for the Rest of Us_](http://netdevconf.org/2.1/session.html?gospodarek)
+    (netdev 2.1, Montreal, April 2017), with Andy Gospodarek:<br />
+    How to get started with eBPF and XDP for normal humans. This presentation
+    was also summarized by Julia Evans on
+    [her blog](http://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/).
 
   (Jesper also created and tries to extend some documentation about eBPF and
   XDP, see [related section](#about-xdp-1).)
@@ -318,6 +323,15 @@ About **cBPF**:
   These use cases for eBPF seem to be only at the stage of proposals (nothing
   merge to OvS main branch) as far as I know, but it will be very interesting
   to see what comes out of it.
+
+* XDP is envisioned to be of great help for protection against Distributed
+  Denial-of-Service (DDoS) attacks. More and more presentations focus on this.
+  For example, the talks from people from Cloudflare
+  ([_XDP in practice: integrating XDP in our DDoS mitigation pipeline_](http://netdevconf.org/2.1/session.html?bertin))
+  or from Facebook
+  ([_Droplet: DDoS countermeasures powered by BPF + XDP_](http://netdevconf.org/2.1/session.html?zhou))
+  at the netdev 2.1 conference in Montreal, Canada, in April 2017, present such
+  use cases.
 
 * [_CETH for XDP_](http://www.slideshare.net/IOVisor/ceth-for-xdp-linux-meetup-santa-clara-july-2016)
   (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016):<br />
@@ -401,6 +415,10 @@ need and read them carefully!
   to which contributions are welcome. Once ready, this document should be
   merged into the man pages and into kernel documentation.
 
+* The Cilium project also has an excellent [BPF and XDP Reference
+  Guide](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
+  developers, that should prove immensely useful to any eBPF developer.
+
 * [A **list of BPF features per kernel version**][kernfeatures] is available in
   bcc repository. Useful is you want to know the minimal kernel version that is
   required to run a given feature. I contributed and added the links to the
@@ -457,6 +475,9 @@ generic functioning. Here are a couple of resources about it.
   [called for contribution](https://marc.info/?l=linux-netdev&m=147436253625672),
   if you feel like improving it).
 
+* The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) from
+  Cilium project… Well, the name says it all.
+
 ### About P4 and BPF
 
 [P4](http://p4.org/) is a language used to specify the behavior of a switch. It
@@ -488,6 +509,9 @@ Sasha Goldshtein also has some
 involving the use of several BPF tools for tracing.
 
 Sadly, as of this writing, there are no tutorials yet on the networking part.
+The talk from Jesper,
+[_XDP for the Rest of Us_](http://netdevconf.org/2.1/session.html?gospodarek),
+may be the closest equivalent.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/gears.svg"/>
