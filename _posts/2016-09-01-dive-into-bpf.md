@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-04-26 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-04-30 ~_
 
 # What is BPF?
 
@@ -409,15 +409,21 @@ need and read them carefully!
   reference for **using BPF with tc**, and includes some example commands and
   samples of code.
 
-* Jesper Dangaard Brouer initiated an attempt to update eBPF documentation,
-  including the different kinds of maps.
+* Jesper Dangaard Brouer initiated an attempt to **update eBPF Linux
+  documentation**, including **the different kinds of maps**.
   [He has a draft](https://prototype-kernel.readthedocs.io/en/latest/bpf/index.html)
   to which contributions are welcome. Once ready, this document should be
   merged into the man pages and into kernel documentation.
 
-* The Cilium project also has an excellent [BPF and XDP Reference
-  Guide](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
+* The Cilium project also has an excellent [**BPF and XDP Reference
+  Guide**](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
   developers, that should prove immensely useful to any eBPF developer.
+
+* Ferris Ellis started
+  [a **blog post series about eBPF**](https://ferrisellis.com/tags/ebpf/).
+  As I write this paragraph, the first article is out, with some historical
+  background and future expectations for eBPF. Next posts should be more
+  technical, and look promising.
 
 * [A **list of BPF features per kernel version**][kernfeatures] is available in
   bcc repository. Useful is you want to know the minimal kernel version that is
