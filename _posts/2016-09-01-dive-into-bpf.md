@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-04-30 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-05-02 ~_
 
 # What is BPF?
 
@@ -858,7 +858,10 @@ BPF.
   the kernel patches always end up
   [on the netdev mailing list](http://lists.openwall.net/netdev/)
   (related to the Linux kernel networking stack development): search for “BPF”
-  or “XDP” keywords. Many discussions and debates also occur
+  or “XDP” keywords. Since April 2017, there is also
+  [a mailing list specially dedicated to XDP programming](http://vger.kernel.org/vger-lists.html#xdp-newbies)
+  (both for architecture or for asking for help). Many discussions and debates
+  also occur
   [on the IO Visor mailing list](http://lists.iovisor.org/pipermail/iovisor-dev/),
   since BPF is at the heart of the project. If you only want to keep informed
   from time to time, there is also an
