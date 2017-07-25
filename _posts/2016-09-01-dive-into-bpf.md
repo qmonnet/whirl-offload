@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-05-02 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-07-25 ~_
 
 # What is BPF?
 
@@ -99,6 +99,10 @@ lower down in the list.
 ### About BPF
 
 Generic presentations about eBPF:
+
+* [The BSD Packet Filter](https://speakerdeck.com/tuxology/the-bsd-packet-filter)
+  (Suchakra Sharma, June 2017): <br />
+  A very nice introduction, mostly about the tracing aspects.
 
 * [_BPF: tracing and more_](http://www.slideshare.net/brendangregg/bpf-tracing-and-more)
   (Brendan Gregg, January 2017):<br />
@@ -419,6 +423,17 @@ need and read them carefully!
   Guide**](http://docs.cilium.io/en/latest/bpf/), written by core eBPF
   developers, that should prove immensely useful to any eBPF developer.
 
+* David Miller has sent several enlightening emails about eBPF/XDP internals on
+  the [xdp-newbies](http://vger.kernel.org/vger-lists.html#xdp-newbies) mailing
+  list. I could not find a link that gathers them at a single place, so here is
+  a list:
+    * [bpf.h and you…](https://www.spinics.net/lists/xdp-newbies/msg00179.html)
+    * [Contextually speaking…](https://www.spinics.net/lists/xdp-newbies/msg00181.html)
+    * [BPF Verifier Overview](https://www.spinics.net/lists/xdp-newbies/msg00185.html)
+
+  The last one is possibly the best existing summary about the verifier at this
+  date.
+
 * Ferris Ellis started
   [a **blog post series about eBPF**](https://ferrisellis.com/tags/ebpf/).
   As I write this paragraph, the first article is out, with some historical
@@ -695,6 +710,11 @@ directory:
 
 Read the comments at the top of the source files to get an overview of their
 usage.
+
+There is also a bpftool program, written by Jakub Kicinski, that can be used to
+interact with eBPF programs and maps from userspace. It is not among the
+sources of the kernel, but you can find it
+[on GitHub](https://github.com/Netronome/bpf-tool).
 
 ### Other interesting chunks
 
