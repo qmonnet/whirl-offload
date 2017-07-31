@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-07-25 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-07-31 ~_
 
 # What is BPF?
 
@@ -528,6 +528,11 @@ focuses on developing new tools, across seventeen “lessons”.
 Sasha Goldshtein also has some
 [_**Linux Tracing Workshops Materials**_](https://github.com/goldshtn/linux-tracing-workshop)
 involving the use of several BPF tools for tracing.
+
+Another post by Jean-Tiare Le Bigot provides a detailed (and instructive!)
+example of
+[using perf and eBPF to setup a low-level tracer](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
+for ping requests and replies
 
 Sadly, as of this writing, there are no tutorials yet on the networking part.
 The talk from Jesper,
