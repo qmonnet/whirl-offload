@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-07-31 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-08-22 ~_
 
 # What is BPF?
 
@@ -267,6 +267,11 @@ About **cBPF**:
   (Tom Herbert, netdev 1.2, Tokyo, October 2016) — as of this writing, only the
   video is available, I don't know if the slides will be added.
 
+* [_High Speed Packet Filtering on Linux_](https://cdn.shopify.com/s/files/1/0177/9886/files/phv2017-gbertin.pdf)
+  (Gilberto Bertin, DEF CON 25, Las Vegas, July 2017) — an excellent
+  introduction to state-of-the-art packet filtering on Linux, oriented towards
+  DDoS protection, talking about packet processing in the kernel, kernel
+  bypass, XDP and eBPF.
 
 ### About other components related or based on eBPF
 
