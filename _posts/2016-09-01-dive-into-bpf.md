@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-08-22 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-10-08 ~_
 
 # What is BPF?
 
@@ -99,6 +99,10 @@ lower down in the list.
 ### About BPF
 
 Generic presentations about eBPF:
+
+* [_Making the Kernel’s Networking Data Path Programmable with BPF and XDP_](http://schd.ws/hosted_files/ossna2017/da/BPFandXDP.pdf)
+  (Daniel Borkmann, OSSNA17, Los Angeles, September 2017):<br />
+  One of the best set of slides available to understand quickly all the basics about eBPF and XDP (mostly for network processing).
 
 * [The BSD Packet Filter](https://speakerdeck.com/tuxology/the-bsd-packet-filter)
   (Suchakra Sharma, June 2017): <br />
@@ -347,6 +351,10 @@ About **cBPF**:
   **CETH** stands for Common Ethernet Driver Framework for faster network I/O,
   a technology initiated by Mellanox.
 
+* [**The VALE switch**](http://info.iet.unipi.it/~luigi/vale/), another virtual
+  switch that can be used in conjunction with the netmap framework, has [a BPF
+  extension module](https://github.com/YutaroHayakawa/vale-bpf).
+
 * **Suricata**, an open source intrusion detection system,
   [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
   for its “capture bypass” features:<br />
@@ -476,9 +484,11 @@ generic functioning. Here are a couple of resources about it.
   [manual pages for tc components](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/man/man8).
 
 * Some additional material can be found within the files of iproute2 package
-  itself: the package contains [some documentation](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/doc),
+  itself: the package contains [some documentation](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc?h=v4.13.0),
   including some files that helped me understand better
-  [the functioning of **tc's actions**](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions).
+  [the functioning of **tc's actions**](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
+  **Edit:** While still available from the Git history, these files have been
+  deleted from iproute2 in October 2017.
 
 * Not exactly documentation: there was
   [a workshop about several tc features](http://netdevconf.org/1.2/session.html?jamal-tc-workshop)
@@ -539,10 +549,12 @@ example of
 [using perf and eBPF to setup a low-level tracer](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
 for ping requests and replies
 
-Sadly, as of this writing, there are no tutorials yet on the networking part.
-The talk from Jesper,
+Few tutorials exist for network-related eBPF use cases. There are some
+interesting documents, including an _eBPF Offload Starting Guide_, on the
+[Open NFP](https://open-nfp.org/dataplanes-ebpf/technical-papers/) platform
+operated by Netronome. Other than these, the talk from Jesper,
 [_XDP for the Rest of Us_](http://netdevconf.org/2.1/session.html?gospodarek),
-may be the closest equivalent.
+is probably one of the best ways to get started with XDP.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/gears.svg"/>
@@ -711,20 +723,20 @@ find the same code in older versions of the package).
 The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`,
 `bpf_jit_disasm.c`) related to BPF, under the
 [linux/tools/net/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/net)
-directory:
+or
+[linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
+directory depending on your version:
 
 * `bpf_asm` is a minimal cBPF assembler.
 * `bpf_dbg` is a small debugger for cBPF programs.
 * `bpf_jit_disasm` is generic for both BPF flavors and could be highly useful
   for JIT debugging.
+* `bpftool` is a generic utility written by Jakub Kicinski, and that can be
+  used to interact with eBPF programs and maps from userspace, for example to
+  show, dump, pin programs, or to show, create, pin, update, delete maps.
 
 Read the comments at the top of the source files to get an overview of their
 usage.
-
-There is also a bpftool program, written by Jakub Kicinski, that can be used to
-interact with eBPF programs and maps from userspace. It is not among the
-sources of the kernel, but you can find it
-[on GitHub](https://github.com/Netronome/bpf-tool).
 
 ### Other interesting chunks
 
@@ -750,8 +762,16 @@ first one, [uBPF](https://github.com/iovisor/ubpf/), is written in C. It
 contains an interpreter, a JIT compiler for x86_64 architecture, an assembler
 and a disassembler.
 
-The second one is my own work: [rbpf](https://github.com/qmonnet/rbpf), based
-on uBPF, but written in Rust. The interpreter and JIT-compiler work, there may
+The code of uBPF seems to have been reused to produce a
+[generic implementation](https://github.com/YutaroHayakawa/generic-ebpf),
+that claims to support FreeBSD kernel, FreeBSD userspace, Linux kernel,
+Linux userspace and MacOSX userspace. It is used for the [BPF extension module
+for VALE switch](https://github.com/YutaroHayakawa/vale-bpf).
+
+The other userspace implementation is my own work:
+[rbpf](https://github.com/qmonnet/rbpf), based
+on uBPF, but written in Rust. The interpreter and JIT-compiler work (both under
+Linux, only the interpreter for MacOSX and Windows), there may
 be more in the future.
 
 ### Commit logs
