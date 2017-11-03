@@ -16,7 +16,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-10-08 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-11-02 ~_
 
 # What is BPF?
 
@@ -359,7 +359,9 @@ About **cBPF**:
   [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
   for its “capture bypass” features:<br />
   [_The adventures of a Suricate in eBPF land_](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf)
-  (Éric Leblond, netdev 1.2, Tokyo, October 2016)
+  (Éric Leblond, netdev 1.2, Tokyo, October 2016)<br />
+  [_eBPF and XDP seen from the eyes of a meerkat_](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
+  (Éric Leblond, Kernel Recipes, Paris, September 2017)
 
 * [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
   (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
@@ -400,6 +402,10 @@ need and read them carefully!
   where you can find **information about errors thrown by the verifier** when
   loading BPF code fails. Can be helpful to troubleshoot obscure error
   messages.
+
+* Also in the kernel tree, there is a document about **frequent Questions &
+  Answers** on eBPF design in file
+  [linux/Documentation/bpf/bpf_design_QA.txt](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_design_QA.txt?id=2e39748a4231a893f057567e9b880ab34ea47aef).
 
 * … But the kernel documentation is dense and not especially easy to read. If
   you look for a simple description of eBPF language, head for
