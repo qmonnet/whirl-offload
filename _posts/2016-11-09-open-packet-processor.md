@@ -3,6 +3,7 @@ layout: post
 title:  "Open Packet Processor"
 date:   2016-11-09
 author: Quentin Monnet
+employer: 6wind
 categories: BEBA
 excerpt: BEBA research project has a strong focus on in-switch stateful packet
   processing for SDN networks. A first abstraction layer for state management

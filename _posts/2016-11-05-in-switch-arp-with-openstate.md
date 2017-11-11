@@ -3,6 +3,7 @@ layout: post
 title:  "In-switch ARP handling with OpenState"
 date:   2016-11-05
 author: Quentin Monnet
+employer: 6wind
 categories: BEBA
 excerpt: ARP is a basic component of most IPv4 networks, where it is used by
   the machines that want to retrieve the MAC address of a recipient possessing

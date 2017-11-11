@@ -3,6 +3,7 @@ layout: post
 title:  "Use cases for BEBA’s stateful packet processing"
 date:   2016-08-26
 author: Quentin Monnet
+employer: 6wind
 excerpt: In previous articles I gave an overview of the BEBA research project,
   and then of the OpenState abstraction layer that enables stateful packet
   processing and has been developed as part of this project. I provided a

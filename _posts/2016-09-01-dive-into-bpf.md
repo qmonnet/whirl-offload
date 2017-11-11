@@ -3,6 +3,7 @@ layout: post
 title:  "Dive into BPF: a list of reading material"
 date:   2016-09-01
 author: Quentin Monnet
+employer: 6wind
 excerpt: BPF, as in Berkeley Packet Filter, was initially conceived in 1992 so
   as to provide a way to filter packets and to avoid useless packet copies from
   kernel to userspace. It initially consisted in a simple bytecode that is

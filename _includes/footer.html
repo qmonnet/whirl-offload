@@ -8,12 +8,17 @@
           <div class="footer-col footer-col-1">
             <ul class="contact-list">
               <li>{{ site.title }}</li>
-              <li>{{ site.author }}</li>
+              <li>{{ site.author }} • R&amp;D Engineer</li>
               <li>
 {% include email.html %}
               </li>
               <li>
+                {% case page.employer %}
+                {% when '6wind' %}
                 <a href="http://6wind.com/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/6WIND.svg"/></a>
+                {% when 'netronome' %}
+                <a href="https://netronome.com/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/Netronome.svg"/></a>
+                {% endcase %}
                 <a href="{{ site.baseurl }}/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/frigate.svg"/></a>
               </li>
             </ul>
@@ -21,7 +26,22 @@
 
           <div class="footer-col footer-col-2">
             <ul class="social-media-list">
-              {% for user in site.socnet_users %}
+              {% assign author = site.socnet_users.first %}
+              <li>
+                {% include icon-github.html username=author.github_username %}
+              </li>
+              <li>
+                {% include icon-twitter.html username=author.twitter_username %}
+              </li>
+              <li><br /></li>
+              {% case page.employer %}
+              {% when '6wind' %}
+              {% assign off = 1 %}
+              {% when 'netronome' %}
+              {% assign off = 2 %}
+              {% endcase %}
+              {% if page.employer %}
+              {% for user in site.socnet_users offset:off limit:1 %}
               <li>
                 {% include icon-github.html username=user.github_username %}
               </li>
@@ -30,11 +50,20 @@
               </li>
               <li><br /></li>
               {% endfor %}
+              {% endif %}
             </ul>
           </div>
 
           <div class="footer-col footer-col-3">
-            <p>{{ site.description }}</p>
+            <p>
+              {{ site.description }}
+              {% case page.employer %}
+              {% when '6wind' %}
+              <br />Work realised at <a href="http://6wind.com/">6WIND</a>.
+              {% when 'netronome' %}
+              <br />Work realised at <a href="https://netronome.com/">Netronome</a>.
+              {% endcase %}
+            </p>
             <p>
 {% include license.html %}
             </p>

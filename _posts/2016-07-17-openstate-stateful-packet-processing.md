@@ -3,6 +3,7 @@ layout: post
 title:  "OpenState: an abstraction design for stateful packet processing"
 date:   2016-07-17
 author: Quentin Monnet
+employer: 6wind
 excerpt: This article is a brief presentation of the OpenState abstraction
   layer for stateful packet processing for programmable switching. Did you ever
   wonder how to model, for your network switches, complex applications that

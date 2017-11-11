@@ -3,6 +3,7 @@ layout: post
 title:  "Summary of the 2017 IO Visor Summit"
 date:   2017-03-03
 author: Quentin Monnet
+employer: 6wind
 categories: BPF
 tags: [BPF]
 ---

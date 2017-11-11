@@ -8,30 +8,41 @@ permalink: /about/
 
 Engineering and doing research in fast networking environments can bring out
 many interesting technical or conceptual elements. At one point I wanted to
-share some of it, so here we are: this is my technical blog about my work at
-[6WIND][].
+share some of it, so here we are: this is my technical blog about my work in
+the field of fast networking.
 
 <figure>
   <img alt="{{ site.title }}'s logo" src="{{ site.baseurl }}/img/site/frigate.svg" style="width:250px;" />
 </figure>
 
-Please note that this remains a personal blog: while my employer is fully aware
-of its existence, the articles are not reviewed in details by 6WIND. This is
-not even a roadmap blog. So opinions, points of view, technical mistakes and so
-on are my own; experiments do not necessarily result in new functionalities for
-the company's products; and **at no point should the responsibility of 6WIND be
-engaged about something that is written here**. For your information, 6WIND
-does have [an official blog](http://www.6wind.com/blog/), even though you may
-find that it is more commercial than technical.
-
 If you wish to react to something I wrote here, please feel free to send me an
 email or to ping me on Twitter.
+
+# Disclaimers
+
+I always wanted to associate this blog to the companies that pay me to do the
+work I write about, so initially I cited my first employer on all pages. Since
+at some point I took a new position in a different company—these things
+happen!—I modified my template, and now you can find on each post the logo and
+name of my employer at the moment I did the work. This does not imply any
+specific partnership between the companies mentioned on this website.
+
+Please note that this remains a _personal blog_: while my employer is fully
+aware of its existence, the articles are not reviewed in details by the company
+before posting. This is not even a roadmap blog. So opinions, points of view,
+technical mistakes and so on are my own; experiments do not necessarily result
+in new functionalities for the company's products; and **at no point should the
+responsibility of my current or past employers be engaged about something that
+is written here**. For your information, the companies I have been working for
+do have official blogs, even though you may find that they are more commercial
+than technical. [Here you will find 6WIND's](http://www.6wind.com/blog/), and
+[there is Netronome's](https://www.netronome.com/blog/).
 
 # About me
 
 I am Quentin <span style="font-variant: small-caps;">Monnet</span>, a French
 R&D engineer. I joined 6WIND in fall 2015, after completing my PhD in computer
-science.
+science, and changed for Netronome two years later, in fall 2017.
 
 <figure>
   <img alt="Little Helper" src="{{ site.baseurl }}/img/site/littlehelper.svg" style="width:150px;" />
@@ -45,29 +56,57 @@ more details about me on [my personal webpage](https://qmo.fr/).
 # About 6WIND
 
 [6WIND][] is a French medium company based close to Paris (with regional
-offices on other continents). We specialize in producing and selling quality
-software for high-speed packet processing in Linux environments. We work on
-accelerating virtual networking infrastructure, and at the same time we try to
-optimize hardware management on multicore architectures in order to provide
-extremely high bit rates with a variety of network protocols, while saving as
-much processing cores as possible for the software appliances. We go by one
-motto: _Speed Matters_!
+offices on other continents). It specialises in producing and selling quality
+software for high-speed packet processing in Linux environments. The company
+works on accelerating virtual networking infrastructure, and at the same time
+it tries to optimise hardware management on multicore architectures in order to
+provide extremely high bit rates with a variety of network protocols, while
+saving as much processing cores as possible for the software appliances. People
+there go by one motto: _Speed Matters_!
 
 <figure>
   <img alt="6WIND's logo" src="{{ site.baseurl }}/img/site/6WIND.svg" style="width:250px"/>
 </figure>
 
-We also contribute to several open-source projects, including DPDK, the Linux
-networking stack, OpenStack, Open vSwitch, Quagga and a few others.
+6WIND also contributes to several open-source projects, including DPDK, the
+Linux networking stack, OpenStack, Open vSwitch, Quagga / FRRouting and a few
+others.
 
-We even have research activities, and take part in projects such as
+It is also involved in research activities, and takes part in projects such as
 [BEBA](http://www.beba-project.eu/our-team), with industrial but also academic
-partners. As a side note, in my position I focus especially on such projects,
-so they should motivate most of the articles of this blog.
+partners.
 
 More details are available on [the company's webpage][6WIND].
 
 [6WIND]: http://6wind.com/
+
+# About Netronome
+
+_Bringing Software Innovation Velocity to Networking Hardware_. This motto is
+not as catchy, but it exposes clearly [Netronome][]'s technical objectives.
+Again, speed and performances are at stake, but instead of working on pure
+software solutions, The company designs network cards. These devices, based on
+a number of “Network Flow Processors” (NFPs) are highly programmable. They can
+run as standard NICs, or they can serve as a support for hardware offload of
+technologies such as Open vSwitch or Linux eBPF. Optimised for x86
+“Off-The-Shelf” servers, the cards can efficiently relieve the nodes from
+packet processing tasks and attain excellent performances in data center
+networking. Netronome is based in California, with offices other parts of the
+US and in various part of the world. I work in the team in Cambridge, United
+Kingdom.
+
+<figure>
+  <img alt="Netronome's logo" src="{{ site.baseurl }}/img/site/Netronome.svg" style="width:300px"/>
+</figure>
+
+Netronome takes part in several open-source projects and is an active
+contributor to the Linux kernel, and is involved in many other projects such
+DPDK or IO Visor.
+
+Again, comprehensive information is available on [the company's
+website][netronome].
+
+[netronome]: https://www.netronome.com/
 
 # Credits
 
@@ -100,6 +139,9 @@ International License](https://creativecommons.org/licenses/by/4.0/).
 <figure>
   <img alt="CC-BY 4.0" src="{{ site.baseurl }}/img/site/by.svg" style="width:150px;" />
 </figure>
+
+The logos of the companies, of course, are under copyright or their respective
+owners, and not subject to this license.
 
 I launched this blog in order to share my work with the community, so if you
 want to reuse some of the contents, please do not hesitate: help yourselves.

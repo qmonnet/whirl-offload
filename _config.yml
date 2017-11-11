@@ -12,9 +12,9 @@ permalink: /:year/:month/:day/:title/
 
 # Site meta
 title: Whirl Offload
-description: Superfast networking technologies and open-source software — among other things.<br /> A blog about my work at <a href='http://www.6wind.com/'>6WIND</a>.
+description: Superfast networking technologies and open-source software — among other things.
 
-author: Quentin Monnet • 6WIND
+author: Quentin Monnet
 
 repository: "qmonnet/whirl-offload"
 
@@ -23,6 +23,8 @@ socnet_users:
     github_username:  qmonnet
   - twitter_username: 6WINDsoftware
     github_username:  6WIND
+  - twitter_username: Netronome
+    github_username:  Netronome
 
 # Build settings
 markdown: kramdown
