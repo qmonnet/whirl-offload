@@ -17,7 +17,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-11-02 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-12-14 ~_
 
 # What is BPF?
 
@@ -100,6 +100,11 @@ lower down in the list.
 ### About BPF
 
 Generic presentations about eBPF:
+
+* [_A thorough introduction to eBPF_](https://lwn.net/Articles/740157/)
+  (Matt Flemming, on LWN.net, December 2017): <br />
+  A well-written and accessible introduction providing an overview of eBPF
+  subsystem components.
 
 * [_Making the Kernel’s Networking Data Path Programmable with BPF and XDP_](http://schd.ws/hosted_files/ossna2017/da/BPFandXDP.pdf)
   (Daniel Borkmann, OSSNA17, Los Angeles, September 2017):<br />
@@ -346,6 +351,13 @@ About **cBPF**:
   ([_Droplet: DDoS countermeasures powered by BPF + XDP_](http://netdevconf.org/2.1/session.html?zhou))
   at the netdev 2.1 conference in Montreal, Canada, in April 2017, present such
   use cases.
+
+* **Kubernetes** can interact in a number of ways with eBPF. There is and
+  interesting article about [_Using eBPF in
+  Kubernetes_](http://blog.kubernetes.io/2017/12/using-ebpf-in-kubernetes.html)
+  that explains how existing products (Cilium, Weave Scope) leverage eBPF to
+  work with Kubernetes, or more generically describing what interactions with
+  eBPF are interesting in the context of container deployment.
 
 * [_CETH for XDP_](http://www.slideshare.net/IOVisor/ceth-for-xdp-linux-meetup-santa-clara-july-2016)
   (Yan Chan and Yunsong Lu, Linux Meetup, Santa Clara, July 2016):<br />
