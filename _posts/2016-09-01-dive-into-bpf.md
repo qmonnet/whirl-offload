@@ -56,7 +56,7 @@ Path”), a new fast path recently added to the kernel. XDP works in conjunction
 with the Linux stack, and relies on BPF to perform very fast packet processing.
 
 Even some projects such as P4, Open vSwitch,
-[consider](http://openvswitch.org/pipermail/dev/2014-October/047421.html)
+[consider](http://openvswitch.org/pipermail/ovs-dev/2014-October/047421.html)
 or started to approach BPF. Some others, such as CETH, Cilium, are entirely
 based on it. BPF is buzzing, so we can expect a lot of tools and projects to
 orbit around it soon…
