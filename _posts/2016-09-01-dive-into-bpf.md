@@ -500,12 +500,12 @@ generic functioning. Here are a couple of resources about it.
   them have been added lately. If you cannot find the documentation for a
   particular queuing discipline (qdisc), class or filter, it may be worth
   checking the latest
-  [manual pages for tc components](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/man/man8).
+  [manual pages for tc components](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/man/man8).
 
 * Some additional material can be found within the files of iproute2 package
-  itself: the package contains [some documentation](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc?h=v4.13.0),
+  itself: the package contains [some documentation](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/doc?h=v4.13.0),
   including some files that helped me understand better
-  [the functioning of **tc's actions**](https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
+  [the functioning of **tc's actions**](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/tree/doc/actions?h=v4.13.0).<br />
   **Edit:** While still available from the Git history, these files have been
   deleted from iproute2 in October 2017.
 
@@ -514,10 +514,9 @@ generic functioning. Here are a couple of resources about it.
   (including filtering, BPF, tc offload, …) organized by Jamal Hadi Salim
   during the netdev 1.2 conference (October 2016).
 
-* Bonus information—If you use `tc` a lot, here are some good news: I [wrote a
-  bash completion
-  function](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/commit/bash-completion/tc?id=27d44f3a8a4708bcc99995a4d9b6fe6f81e3e15b)
-  for this tool, and it should be shipped with package iproute2 coming with
+* Bonus information—If you use `tc` a lot, here are some good news: I
+  [wrote a bash completion function](https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/commit/bash-completion/tc?id=27d44f3a8a4708bcc99995a4d9b6fe6f81e3e15b)
+  for this tool, and it is now shipped with package iproute2 coming with
   kernel version 4.6 and higher!
 
 ### About XDP
@@ -604,7 +603,7 @@ feature.
 The iproute2 package provide several examples as well. They are obviously
 oriented towards network programming, since the programs are to be attached to
 tc ingress or egress interfaces. The examples dwell under the
-[iproute2/examples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/examples/bpf)
+[iproute2/examples/bpf/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/examples/bpf)
 directory.
 
 ### From bcc set of tools
@@ -727,12 +726,12 @@ into the kernel, happens
 
 The code related to BPF **in tc** comes with the iproute2 package, of course.
 Some of it is under the
-[iproute2/tc/](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/tc)
+[iproute2/tc/](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/tc)
 directory. The files f\_bpf.c and m\_bpf.c (and e\_bpf.c) are used respectively
 to handle BPF filters and actions (and tc `exec` command, whatever this may
 be). File q\_clsact.c defines the `clsact` qdisc especially created for BPF.
 But **most of the BPF userspace logic** is implemented in
-[iproute2/lib/bpf.c](https://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/tree/lib/bpf.c)
+[iproute2/lib/bpf.c](https://git.kernel.org/pub/scm/network/iproute2/iproute2-next.git/tree/lib/bpf.c)
 library, so this is probably where you should head to if you want to mess up
 with BPF and tc (it was moved from file iproute2/tc/tc_bpf.c, where you may
 find the same code in older versions of the package).
