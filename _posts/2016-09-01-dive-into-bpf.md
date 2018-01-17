@@ -17,7 +17,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2017-12-14 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-01-17 ~_
 
 # What is BPF?
 
@@ -118,7 +118,7 @@ Generic presentations about eBPF:
   (Brendan Gregg, January 2017):<br />
   Mostly about the tracing use cases.
 
-* [_Linux BPF Superpowers_](http://fr.slideshare.net/brendangregg/linux-bpf-superpowers)
+* [_Linux BPF Superpowers_](http://www.slideshare.net/brendangregg/linux-bpf-superpowers)
   (Brendan Gregg, March 2016):<br />
   With a first part on the use of **flame graphs**.
 
@@ -296,7 +296,7 @@ About **cBPF**:
   is one of the core maintainers of Open vSwitch. In this case, John Fastabend
   is interviewed.
 
-* [_P4, EBPF and Linux TC Offload_](http://open-nfp.org/media/pdfs/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL.pdf)
+* [_P4, EBPF and Linux TC Offload_](https://open-nfp.org/m/documents/Open_NFP_P4_EBPF_Linux_TC_Offload_FINAL_5JHLETS.pdf)
   (Dinan Gunawardena and Jakub Kicinski, August 2016):<br />
   Another presentation on **P4**, with some elements related to eBPF hardware
   offload on Netronome's **NFP** (Network Flow Processor) architecture.
@@ -741,7 +741,7 @@ find the same code in older versions of the package).
 
 The kernel also ships the sources of three tools (`bpf_asm.c`, `bpf_dbg.c`,
 `bpf_jit_disasm.c`) related to BPF, under the
-[linux/tools/net/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/net)
+linux/tools/net/ (until Linux 4.14)
 or
 [linux/tools/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/bpf)
 directory depending on your version:
@@ -752,7 +752,8 @@ directory depending on your version:
   for JIT debugging.
 * `bpftool` is a generic utility written by Jakub Kicinski, and that can be
   used to interact with eBPF programs and maps from userspace, for example to
-  show, dump, pin programs, or to show, create, pin, update, delete maps.
+  show, dump, load, pin programs, or to show, create, pin, update, delete maps.
+  It can also attach and detach programs to cgroups, and has JSON support.
 
 Read the comments at the top of the source files to get an overview of their
 usage.
