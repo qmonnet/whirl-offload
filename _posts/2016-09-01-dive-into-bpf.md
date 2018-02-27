@@ -17,7 +17,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-01-17 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-02-27 ~_
 
 # What is BPF?
 
@@ -200,6 +200,12 @@ Introducing BPF, but also presenting **generic concepts of Linux networking**:
   feature:<br />
   [eBPF/XDP hardware offload to SmartNICs](http://netdevconf.org/1.2/session.html?jakub-kicinski)
   (Jakub Kicinski and Nic Viljoen, netdev 1.2, Tokyo, October 2016)
+* An updated version was presented on year later:<br />
+  [Comprehensive XDP offload---Handling the edge cases](https://www.netdevconf.org/2.2/session.html?viljoen-xdpoffload-talk)
+  (Jakub Kicinski and Nic Viljoen, netdev 2.2, Seoul, November 2017)
+* I presented a shorter but updated version at FOSDEM 2018:<br />
+  [The Challenges of XDP Hardware Offload](https://fosdem.org/2018/schedule/event/xdp/)
+  (Quentin Monnet, FOSDEM'18, Brussels, February 2018)
 
 About **cBPF**:
 
@@ -269,6 +275,9 @@ About **cBPF**:
     How to get started with eBPF and XDP for normal humans. This presentation
     was also summarized by Julia Evans on
     [her blog](http://jvns.ca/blog/2017/04/07/xdp-bpf-tutorial/).
+  * [_XDP for the Rest of Us_](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)…
+    second edition (netdev 2.2, Seoul, November 2017), same authors:<br />
+    Revised version of the talk, with new contents.
 
   (Jesper also created and tries to extend some documentation about eBPF and
   XDP, see [related section](#about-xdp-1).)
@@ -550,11 +559,10 @@ This changed with P4_16 version, the p4c reference compiler including
 
 ## Tutorials
 
-Brendan Gregg has produced excellent **tutorials** intended for people who want
+Brendan Gregg has initiated excellent **tutorials** intended for people who want
 to **use bcc tools** for tracing and monitoring events in the kernel.
-[The first tutorial about using bcc itself](https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md)
-comes with eleven steps (as of today) to understand how to use the existing
-tools, while
+[The first tutorial about using bcc itself][refguide]
+comes with many steps to understand how to use the existing tools, while
 [the one **intended for Python developers**](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md)
 focuses on developing new tools, across seventeen “lessons”.
 
@@ -570,9 +578,11 @@ for ping requests and replies
 Few tutorials exist for network-related eBPF use cases. There are some
 interesting documents, including an _eBPF Offload Starting Guide_, on the
 [Open NFP](https://open-nfp.org/dataplanes-ebpf/technical-papers/) platform
-operated by Netronome. Other than these, the talk from Jesper,
-[_XDP for the Rest of Us_](http://netdevconf.org/2.1/session.html?gospodarek),
-is probably one of the best ways to get started with XDP.
+operated by Netronome. Other than these, the talks from Jesper and Andy,
+[_XDP for the Rest of Us_](http://netdevconf.org/2.1/session.html?gospodarek)
+(and
+[its second edition](https://www.netdevconf.org/2.2/session.html?gospodarek-xdp-workshop)),
+are probably one of the best ways to get started with XDP.
 
 <figure style="margin-top: 60px; margin-bottom: 20px;">
   <img src="{{ site.baseurl }}/img/icons/gears.svg"/>
@@ -591,8 +601,17 @@ programs in C language).
 The kernel contains examples for most types of program: filters to bind to
 sockets or to tc interfaces, event tracing/monitoring, and even XDP. You can
 find these examples under the
-[linux/samples/bpf/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/samples/bpf)
+[linux/samples/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/samples/bpf)
 directory.
+
+Nowadays, most examples are added under
+[linux/tools/testing/selftests/bpf](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/testing/selftests/bpf)
+as unit tests. This includes tests for hardware offload or for libbpf.
+
+Jesper Dangaard Brouer also maintains a specific set of samples in his
+[prototype-kernel](https://github.com/netoptimizer/prototype-kernel/tree/master/kernel/samples/bpf)
+repository. They are very similar to those from the kernel, but can be compiled
+outside of the kernel infrastructure (Makefiles and headers).
 
 Also do not forget to have a look to the logs related to the (git) commits that
 introduced a particular feature, they may contain some detailed example of the
@@ -626,6 +645,9 @@ Many examples are [provided with bcc](https://github.com/iovisor/bcc/tree/master
 * There are also some examples **using Lua** as a different BPF back-end (that
   is, BPF programs are written with Lua instead of a subset of C, allowing to
   use the same language for front-end and back-end), in the third directory.
+
+* Of course, [bcc tools](https://github.com/iovisor/bcc/tree/master/tools)
+  themselves are interesting example use cases for eBPF programs.
 
 ### Manual pages
 
@@ -670,30 +692,30 @@ the relevant files, finding the functions you want is up to you!
   names: `verifier.c` contains the **verifier** (no kidding), `arraymap.c` the
   code used to interact with **maps** of type array, and so on.
 
-* The **helpers**, as well as several functions related to networking (with tc,
-  XDP…) and available to the user, are implemented in
+* Several functions as well as the **helpers** related to **networking** (with
+  tc, XDP…) and available to the user, are implemented in
   [linux/net/core/filter.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/filter.c).
   It also contains the code to migrate cBPF bytecode to eBPF (since all cBPF
   programs are now translated to eBPF in the kernel before being run).
 
+* Function and **helpers** related to **event tracing** are in
+  [linux/kernel/trace/bpf\_trace.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/trace/bpf_trace.c)
+  instead.
 
 * The **JIT compilers** are under the directory of their respective
   architectures, such as file
   [linux/arch/x86/net/bpf\_jit\_comp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/arch/x86/net/bpf_jit_comp.c)
-  for x86.
+  for x86. Exception is made for JIT compilers used for hardware offload, they
+  sit in their driver, see for instance
+  [linux/drivers/net/ethernet/netronome/nfp/bpf/jit.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/ethernet/netronome/nfp/bpf/jit.c)
+  for Netronome NFP cards.
 
 * You will find the code related to **the BPF components of tc** in the
   [linux/net/sched/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/sched)
   directory, and in particular in files `act_bpf.c` (action) and `cls_bpf.c`
   (filter).
 
-* I have not hacked with **event tracing** in BPF, so I do not really know
-  about the hooks for such programs. There is some stuff in
-  [linux/kernel/trace/bpf\_trace.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/trace/bpf_trace.c).
-  If you are interested in this and want to know more, you may dig on the side
-  of Brendan Gregg's presentations or blog posts.
-
-* Nor have I used **seccomp-BPF**. But the code is in
+* I have not used **seccomp-BPF** much, but you should find the code in
   [linux/kernel/seccomp.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/kernel/seccomp.c),
   and some example use cases can be found in
   [linux/tools/testing/selftests/seccomp/seccomp\_bpf.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/tools/testing/selftests/seccomp/seccomp_bpf.c).
@@ -705,12 +727,12 @@ from userspace into the kernel network path thanks to a Netlink command. On
 reception, the function `dev_change_xdp_fd()` in file
 [linux/net/core/dev.c](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/net/core/dev.c)
 is called and sets a XDP hook. Such hooks are located in the drivers of
-supported NICs. For example, the mlx4 driver used for some Mellanox hardware
-has hooks implemented in files under the
-[drivers/net/ethernet/mellanox/mlx4/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/ethernet/mellanox/mlx4/)
-directory. File en\_netdev.c receives Netlink commands and calls
-`mlx4_xdp_set()`, which in turns calls for instance `mlx4_en_process_rx_cq()`
-(for the RX side) implemented in file en\_rx.c.
+supported NICs. For example, the nfp driver used for Netronome hardware has
+hooks implemented in files under the
+[drivers/net/ethernet/netronome/nfp/](https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/ethernet/netronome/nfp/)
+directory. File nfp\_net\_common.c receives Netlink commands and calls
+`nfp_net_xdp_setup()`, which in turns calls for instance
+`nfp_net_xdp_setup_drv()` to install the program.
 
 ### BPF logic in bcc
 
@@ -756,6 +778,13 @@ directory depending on your version:
 
 Read the comments at the top of the source files to get an overview of their
 usage.
+
+Other essential files to work with eBPF are the two **userspace libraries**
+from the kernel tree, that can be used to manage eBPF programs or maps from
+external programs. The functions are accessible through headers `bpf.h` and
+`libbpf.h` (higher level) from directory
+[linux/tools/lib/bpf/](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/tools/lib/bpf).
+The tool `bpftool` heavily relies on those libraries, for example.
 
 ### Other interesting chunks
 
