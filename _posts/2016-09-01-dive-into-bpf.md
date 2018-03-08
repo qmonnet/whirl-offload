@@ -17,7 +17,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-02-27 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-03-08 ~_
 
 # What is BPF?
 
@@ -377,13 +377,20 @@ About **cBPF**:
   switch that can be used in conjunction with the netmap framework, has [a BPF
   extension module](https://github.com/YutaroHayakawa/vale-bpf).
 
-* **Suricata**, an open source intrusion detection system,
-  [seems to rely on eBPF components](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/)
-  for its “capture bypass” features:<br />
-  [_The adventures of a Suricate in eBPF land_](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf)
-  (Éric Leblond, netdev 1.2, Tokyo, October 2016)<br />
-  [_eBPF and XDP seen from the eyes of a meerkat_](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
-  (Éric Leblond, Kernel Recipes, Paris, September 2017)
+* **Suricata**, an open source intrusion detection system, now relies on XDP
+  for its “capture bypass” features. There is a number of resources about it:
+    * [_eBPF and XDP_ section of Suricata documentation](http://suricata.readthedocs.io/en/latest/capture-hardware/ebpf-xdp.html?highlight=XDP#ebpf-and-xdp)
+    * [_SEPTun-Mark-II_](https://github.com/pevma/SEPTun-Mark-II) (_Suricata Extreme Performance Tuning guide - Mark II_),
+      published by Michal Purzynski and Peter Manev in March 2018
+    * [A blog post introducing the feature](https://www.stamus-networks.com/2016/09/28/suricata-bypass-feature/),
+      published by Éric Leblond in September 2016
+    * [_The adventures of a Suricate in eBPF land_](http://netdevconf.org/1.2/slides/oct6/10_suricata_ebpf.pdf),
+      a talk on the subject (Éric Leblond, netdev 1.2, Tokyo, October 2016)
+    * [_eBPF and XDP seen from the eyes of a meerkat_](https://www.slideshare.net/ennael/kernel-recipes-2017-ebpf-and-xdp-eric-leblond)
+      a more recent talk (Éric Leblond, Kernel Recipes, Paris, September 2017)
+
+  The project claims to attain excellent performances when using driver-native
+  XDP.
 
 * [InKeV: In-Kernel Distributed Network Virtualization for DCN](https://github.com/iovisor/bpf-docs/blob/master/university/sigcomm-ccr-InKev-2016.pdf)
   (Z. Ahmed, M. H. Alizai and A. A. Syed, SIGCOMM, August 2016):<br />
