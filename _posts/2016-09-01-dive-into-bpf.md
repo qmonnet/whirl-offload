@@ -17,7 +17,7 @@ tags: [eBPF]
 * ToC
 {:toc}
 
-_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2018-08-09 ~_
+_~ [Updated](https://github.com/qmonnet/whirl-offload/commits/gh-pages/_posts/2016-09-01-dive-into-bpf.md) 2019-01-10 ~_
 
 # What is BPF?
 
@@ -101,6 +101,15 @@ lower down in the list.
 
 Generic presentations about eBPF:
 
+* [_A brief introduction to XDP and eBPF_](https://blogs.igalia.com/dpino/2019/01/07/introduction-to-xdp-and-ebpf/)
+  (Diego Pino García, January 2019): <br />
+  An excellent and accessible introduction providing context, history, and
+  details about the functioning of eBPF.
+
+* [_Introduction to eBPF in Red Hat Enterprise Linux 7_](https://www.redhat.com/en/blog/introduction-ebpf-red-hat-enterprise-linux-7)
+  (Stanislav Kozina, January 2019): <br />
+  Focusing on the eBPF features arriving in Red Hat.
+
 * [_Toward Flexible and Efficient In-Kernel Network Function Chaining with IO Visor_](http://fulvio.frisso.net/files/18HPSR%20-%20eBPF.pdf)
   (Fulvio Risso, HPSR 2018, Bucharest, June 2018): <br />
   A generic introduction to BPF, XDP, IO Visor, bcc and other components.
@@ -171,6 +180,13 @@ The [**IO Visor blog**](https://www.iovisor.org/resources/blog) has some
 interesting technical articles about BPF. Some of them contain a bit of
 marketing talks.
 
+As of early 2019, there are more and more presentations being done around
+multiple aspects of BPF. One nice example is
+[the BPF track](http://vger.kernel.org/lpc-bpf.html) that was held in parallel
+to the Linux Plumbers Conference in late 2018 (and should be held again on
+coming years), where lots of topics related to eBPF development or use cases
+were presented.
+
 **Kernel tracing**: summing up all existing methods, including BPF:
 
 * [_Meet-cute between eBPF and Kerne Tracing_](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing)
@@ -234,6 +250,11 @@ About **cBPF**:
 
 ### About XDP
 
+* [_The eXpress Data Path_](https://blogs.igalia.com/dpino/2019/01/10/the-express-data-path/)
+  (Diego Pino García, January 2019):<br />
+  Probably one of the most accessible introduction to XDP, providing sample
+  code to show how one can easily process packets.
+
 * [XDP overview](https://www.iovisor.org/technology/xdp) on the IO Visor
   website.
 
@@ -242,7 +263,7 @@ About **cBPF**:
   The first presentation about XDP.
 
 * [_BoF - What Can BPF Do For You?_](https://events.linuxfoundation.org/sites/events/files/slides/iovisor-lc-bof-2016.pdf)
-  (Brenden Blanco, LinuxCon, Toronto, August 2016).<br />
+  (Brenden Blanco, LinuxCon, Toronto, August 2016).
 
 * [_eXpress Data Path_](http://www.slideshare.net/IOVisor/express-data-path-linux-meetup-santa-clara-july-2016)
   (Brenden Blanco, Linux Meetup at Santa Clara, July 2016):<br />
@@ -306,6 +327,18 @@ About **cBPF**:
   There are a couple of presentations about the mechanism, such as
   [Fast Packet Processing in Linux with AF\_XDP](https://archive.fosdem.org/2018/schedule/event/af_xdp/)
   (Björn Töpel and Magnus Karlsson, FOSDEM 2018, Brussels, February 2018).
+
+* A full-length article describing the details of XDP is available, dating from
+  December 2018. It is called
+  [_The eXpress Data Path: Fast Programmable Packet Processing in the Operating System Kernel_](https://github.com/tohojo/xdp-paper)
+  and was written by Toke Høiland-Jørgensen, Jesper Dangaard Brouer, Daniel
+  Borkmann, John Fastabend, Tom Herbert, David Ahern and David Miller, all
+  being essential eBPF and XDP contributors.
+
+* As eBPF support is coming to Red Hat, engineers from the company publish
+  interesting content about it. Here is an article on
+  [_Achieving high-performance, low-latency networking with XDP_ (Part I)](https://developers.redhat.com/blog/2018/12/06/achieving-high-performance-low-latency-networking-with-xdp-part-1/),
+  from Paolo Abeni (December 2018).
 
 ### About other components related or based on eBPF
 
@@ -440,8 +473,13 @@ About **cBPF**:
 
 * [**ply**](https://wkz.github.io/ply/) is a small but flexible open source
   dynamic **tracer** for Linux, with some features similar to the bcc tools,
-  but with a simpler language inspired by awk and dtrace, written by Tobias
+  but with a simpler language inspired by awk and DTrace, written by Tobias
   Waldekranz.
+
+* [**BPFtrace**](https://github.com/iovisor/bpftrace) is also a tool for
+  tracing, again with its own DSL. It is flexible enough to be envisioned as a
+  Linux replacement for DTrace and SystemTap. It was created by Alastair
+  Robertson and Brendan Gregg.
 
 * [**BPFd**](https://www.socallinuxexpo.org/scale/16x/presentations/ebpf-super-powers-arm64)
   is a project trying to leverage the flexibility of the bcc tools to trace and
@@ -449,12 +487,36 @@ About **cBPF**:
   [**adeb**](https://github.com/joelagnel/adeb) is related, and provides a
   Linux shell environment for that purpose.
 
+* It is not to be confused with
+  [**bpfd**](https://github.com/genuinetools/bpfd), small letters, which claims
+  to be a container-aware framework for running BPF tracers with rules on Linux
+  as a daemon.
+
 * Could **DPDK** one day work in concert with BPF? It looks likely that the
   AF\_XDP mechanism introduced in the kernel will be used to drive packets to
   user space and to feed them to applications using the framework. However,
   there were also some
   [discussions for replicating the eBPF interpreter and JIT compiler in DPDK itself](http://mails.dpdk.org/archives/dev/2018-March/092120.html).
   They did not seem to lead to the inclusion on the feature at this time.
+
+* Even if it does not make it to the core of DPDK, eBPF, and in particular
+  AF\_XDP, using XDP programs to redirect packets to user space sockets, can be
+  used to create
+  [**a poll-mode driver (PMD) for DPDK**](https://dpdkuserspace2018.sched.com/event/G45Z/dpdk-pmd-for-afxdp).
+
+* [**Sysdig**](https://github.com/draios/sysdig), a tool for _universal system
+  visibility with native support for containers_, now supports eBPF
+  [as an instrumentation back end](https://github.com/draios/sysdig/wiki/eBPF).
+
+* The user file system **FUSE** is also considering using eBPF for improved
+  performance. This was the topic of
+  [a presentation at the Linux Foundation Open Source Summit 2017](https://events.linuxfoundation.org/wp-content/uploads/2017/11/When-eBPF-Meets-FUSE-Improving-Performance-of-User-File-Systems-Ashish-Bijlani-Georgia-Tech.pdf),
+  and [a related page on the _ExtFUSE_ project](https://extfuse.github.io/) is
+  available.
+
+* In order to help with measuring power consumption for servers, the
+  [**DEEP-mon**](https://www.slideshare.net/necstlab/deepmon-dynamic-and-energy-efficient-power-monitoring-for-containerbased-infrastructures)
+  tool is using eBPF programs for in-kernel aggregation of data.
 
 * If you read my previous article, you might be interested in this talk I gave
   about [implementing the OpenState interface with eBPF](https://fosdem.org/2017/schedule/event/stateful_ebpf/),
@@ -601,6 +663,12 @@ generic functioning. Here are a couple of resources about it.
 * The [BPF and XDP Reference Guide](http://docs.cilium.io/en/latest/bpf/) from
   Cilium project… Well, the name says it all.
 
+### About flow dissectors
+
+* LWN has an excellent article about
+  [_Writing network flow dissectors in BPF_](https://lwn.net/Articles/764200/),
+  contributed by Marta Rybczyńska in September 2018.
+
 ### About P4 and BPF
 
 [P4](http://p4.org/) is a language used to specify the behavior of a switch. It
@@ -630,6 +698,13 @@ comes with many steps to understand how to use the existing tools, while
 [the one **intended for Python developers**](https://github.com/iovisor/bcc/blob/master/docs/tutorial_bcc_python_developer.md)
 focuses on developing new tools, across seventeen “lessons”.
 
+Lorenza Fontana has made a tutorial to explain how to
+[_Load XDP programs using the ip (iproute2) command_](https://medium.com/@fntlnz/load-xdp-programs-using-the-ip-iproute2-command-502043898263).
+
+If you are unfamiliar to kernel compiling, Diego Pino García has a blog entry
+on
+[_How to build a kernel with [AF-]XDP support_](https://blogs.igalia.com/dpino/2019/01/02/build-a-kernel/).
+
 Sasha Goldshtein also has some
 [_**Linux Tracing Workshops Materials**_](https://github.com/goldshtn/linux-tracing-workshop)
 involving the use of several BPF tools for tracing.
@@ -637,7 +712,7 @@ involving the use of several BPF tools for tracing.
 Another post by Jean-Tiare Le Bigot provides a detailed (and instructive!)
 example of
 [using perf and eBPF to setup a low-level tracer](https://blog.yadutaf.fr/2017/07/28/tracing-a-packet-journey-using-linux-tracepoints-perf-ebpf/)
-for ping requests and replies
+for ping requests and replies.
 
 Few tutorials exist for network-related eBPF use cases. There are some
 interesting documents, including an _eBPF Offload Starting Guide_, on the
