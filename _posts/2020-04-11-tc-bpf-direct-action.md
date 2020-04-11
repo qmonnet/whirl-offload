@@ -6,6 +6,9 @@ author: Quentin Monnet
 employer: 6wind
 categories: BPF
 tags: [BPF, tc]
+excerpt: The Linux Traffic Control subsystem, “TC”, got support for running
+  eBPF programs as classifiers. Then a “direct-action” flag appeared. Let's see
+  how it works.
 ---
 
 * ToC
