@@ -59,9 +59,9 @@ before the project actually began. Initiated by researchers from the CNIT, [the
 OpenState interface]({{ site.baseurl }}{% post_url
 2016-07-17-openstate-stateful-packet-processing %}) served as a basis on which
 most of the project was built. Instead of having just one forwarding table with
-actions associated to each flow, this interface would match packets again flow
-characteristics _and_ flow state, and would then associate an action _and_ a
-“next state” for the flow (for a longer description, please refer to my more
+actions associated to each flow, this interface would match packets against
+flow characteristics _and_ flow state, and would then associate an action _and_
+a “next state” for the flow (for a longer description, please refer to my more
 detailed article linked above). As a result, the switch acts as a Mealy
 machine, and can successively apply various actions to the packets, depending
 on which state the flow currently has. It works, it is easy to implement. And
