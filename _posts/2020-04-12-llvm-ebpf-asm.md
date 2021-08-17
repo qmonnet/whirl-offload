@@ -17,6 +17,10 @@ _This post was left aside as a draft for a long time. Most of it was written in
 December 2017. I publish it with the hope it can still be helpful today, even
 though the Cilium guide also covers the feature._
 
+_Arthur Chiao has kindly
+[translated this post into Chinese (Simplified)](https://arthurchiao.art/blog/ebpf-assembly-with-llvm-zh/),
+in case you prefer to read in that language._
+
 One of the most useful evolution of eBPF (_extended Berkeley Packet Filter_)
 over the old BPF version (or cBPF, for _classic BPF_) is the availability of a
 back end based on clang and LLVM, allowing to produce eBPF bytecode from C
@@ -186,13 +190,13 @@ this program. It requires the `llvm-mc` tool that deals with machine code and
 comes along with LLVM.
 
 ```
-$ llvm-mc -triple bpf -filetype=obj -o bpf.o foo.s
+$ llvm-mc -triple bpf -filetype=obj -o bpf.o bpf.s
 ```
 
 We have the ELF file! Let's dump the bytecode:
 
 ```
-$ readelf -x .text my_bpf_objfile.o
+$ readelf -x .text bpf.o
 
 Hex dump of section '.text':
   0x00000000 b7010000 00000000 631afcff 00000000 ........c.......
@@ -316,7 +320,7 @@ you need clang and LLVM in version 6.0 and higher, and the commands are:
 
 ```
 $ clang -target bpf -S -o bpf.s bpf.c
-$ llvm-mc -triple bpf -filetype=obj -o bpf.o foo.s
+$ llvm-mc -triple bpf -filetype=obj -o bpf.o bpf.s
 ```
 
 And to dump that file in human-readable format:
