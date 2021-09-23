@@ -25,6 +25,8 @@ socnet_users:
     github_username:  6WIND
   - twitter_username: Netronome
     github_username:  Netronome
+  - twitter_username: Isovalent
+    github_username:  Isovalent
 
 # Build settings
 markdown: kramdown

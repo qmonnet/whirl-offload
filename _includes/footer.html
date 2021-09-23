@@ -18,6 +18,8 @@
                 <a href="http://6wind.com/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/6WIND.svg"/></a>
                 {% when 'netronome' %}
                 <a href="https://netronome.com/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/Netronome.svg"/></a>
+                {% when 'isovalent' %}
+                <a href="https://isovalent.com/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/Isovalent.svg"/></a>
                 {% endcase %}
                 <a href="{{ site.baseurl }}/"><img class="site-footer-logo" src="{{ site.baseurl }}/img/site/frigate.svg"/></a>
               </li>
@@ -39,6 +41,8 @@
               {% assign off = 1 %}
               {% when 'netronome' %}
               {% assign off = 2 %}
+              {% when 'isovalent' %}
+              {% assign off = 3 %}
               {% endcase %}
               {% if page.employer %}
               {% for user in site.socnet_users offset:off limit:1 %}

@@ -33,16 +33,21 @@ before posting. This is not even a roadmap blog. So opinions, points of view,
 technical mistakes and so on are my own; experiments do not necessarily result
 in new functionalities for the company's products; and **at no point should the
 responsibility of my current or past employers be engaged about something that
-is written here**. For your information, the companies I have been working for
-do have official blogs, even though you may find that they are more commercial
-than technical. [Here you will find 6WIND's](http://www.6wind.com/blog/), and
-[there is Netronome's](https://www.netronome.com/blog/).
+is written here**.
+
+For your information, the companies I have been working for do have official
+blogs, even though you may find that they are more commercial than technical.
+[Here you will find 6WIND's](http://www.6wind.com/blog/), and [there is
+Netronome's](https://www.netronome.com/blog/). Isovalent has [its corporate
+blog](https://isovalent.com/blog), but also contributes a lot to [Cilium's
+blog](https://cilium.io/blog), which is more technical.
 
 # About me
 
 I am Quentin <span style="font-variant: small-caps;">Monnet</span>, a French
 R&D engineer. I joined 6WIND in fall 2015, after completing my PhD in computer
-science, and changed for Netronome two years later, in fall 2017.
+science, and changed for Netronome two years later, in fall 2017. In 2020, I
+moved again to Isovalent.
 
 <figure>
   <img alt="Little Helper" src="{{ site.baseurl }}/img/site/littlehelper.svg" style="width:150px;" />
@@ -92,7 +97,7 @@ technologies such as Open vSwitch or Linux eBPF. Optimised for x86
 “Off-The-Shelf” servers, the cards can efficiently relieve the nodes from
 packet processing tasks and attain excellent performances in data center
 networking. Netronome is based in California, with offices other parts of the
-US and in various part of the world. I work in the team in Cambridge, United
+US and in various part of the world. I worked in the team in Cambridge, United
 Kingdom.
 
 <figure>
@@ -107,6 +112,30 @@ Again, comprehensive information is available on [the company's
 website][netronome].
 
 [netronome]: https://www.netronome.com/
+
+# About Isovalent
+
+[Cilium][cilium] is an open-source project bringing eBPF-based networking,
+observability, and security to cloud-native environments, in particular on
+Kubernetes clusters. It ensures connectivity between the different pod and
+containers, it provides additional services such as load-balancing or
+multi-cluster connectivity. Cilium also offers in-depth visibility about the
+network flows, implements advanced network policies, and comes with many other
+features—too many to list here!
+
+<figure>
+  <img alt="Netronome's logo" src="{{ site.baseurl }}/img/site/Isovalent.svg" style="width:300px"/>
+</figure>
+
+Isovalent builds its product on top of the project, and offers a hardened and
+supported distribution of Cilium with advanced observability and security
+workflows. The company maintains Cilium and co-maintains the eBPF subsystem in
+Linux. I work on Cilium's eBPF-powered datapath, and on a few other components.
+
+Have a look at [Isovalent's website][isovalent] for more information.
+
+[cilium]: https://cilium.io/
+[isovalent]: https://isovalent.com/
 
 # Credits
 
