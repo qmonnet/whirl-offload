@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="139.93547mm"
+   height="100.94432mm"
+   viewBox="0 0 139.93547 100.94432"
+   version="1.1"
+   id="svg56101"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="pr_flow.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview56103"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:zoom="1.4857967"
+     inkscape:cx="173.64422"
+     inkscape:cy="148.06871"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs56098">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Send"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Send"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.2,0,0,-0.2,-1.2,0)"
+         style="fill-rule:evenodd;fill:#204a87;stroke:#204a87;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1528" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill-rule:evenodd;fill:#a40000;stroke:#a40000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1522-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill-rule:evenodd;fill:#a40000;stroke:#a40000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1522-0-8" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20.977195,-106.92292)">
+    <g
+       id="g102159"
+       transform="translate(24.043399,-28.038826)">
+      <rect
+         style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:0.529167;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect18101-6"
+         width="29.873747"
+         height="16.440969"
+         x="0.031489138"
+         y="135.22633"
+         ry="4.9644127" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1;stroke-width:0.264583"
+         x="14.756688"
+         y="145.00891"
+         id="text12231"><tspan
+           sodipodi:role="line"
+           id="tspan12229"
+           x="14.756688"
+           y="145.00891"
+           style="stroke-width:0.264583">Patchwork</tspan></text>
+    </g>
+    <g
+       id="g123107">
+      <rect
+         style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:0.529167;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         id="rect18101-6-3"
+         width="29.873747"
+         height="16.440969"
+         x="127.94123"
+         y="107.18751"
+         ry="4.9644127" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1;stroke-width:0.264583"
+         x="142.88234"
+         y="117.03359"
+         id="text16403"><tspan
+           sodipodi:role="line"
+           x="142.88234"
+           y="117.03359"
+           id="tspan20752"
+           style="stroke-width:0.264583">GitHub</tspan></text>
+    </g>
+    <g
+       id="g122213"
+       transform="translate(0.15161054,-71.890279)">
+      <rect
+         style="fill:#edd400;stroke:#c4a000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect97727-8-6"
+         width="35.539967"
+         height="9.5425749"
+         x="21.090168"
+         y="211.5894"
+         ry="1.873777" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#131000;fill-opacity:1;stroke-width:0.264583"
+         x="33.10284"
+         y="217.98628"
+         id="text68910-5"><tspan
+           sodipodi:role="line"
+           id="tspan68908-69"
+           style="fill:#131000;fill-opacity:1;stroke-width:0.264583"
+           x="33.10284"
+           y="217.98628">Commit 4</tspan></text>
+      <rect
+         style="fill:#729fcf;stroke:#204a87;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect97727-7-3"
+         width="35.539967"
+         height="9.5425749"
+         x="21.090168"
+         y="221.94475"
+         ry="1.873777" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#04070f;fill-opacity:1;stroke-width:0.264583"
+         x="33.032986"
+         y="228.34163"
+         id="text68910-3-7"><tspan
+           sodipodi:role="line"
+           id="tspan68908-6-4"
+           style="fill:#04070f;fill-opacity:1;stroke-width:0.264583"
+           x="33.032986"
+           y="228.34163">Commit 3</tspan></text>
+      <rect
+         style="fill:#f57900;stroke:#ce5c00;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect97727-9-5"
+         width="35.539967"
+         height="9.5425749"
+         x="21.090168"
+         y="232.30009"
+         ry="1.873777" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#140900;fill-opacity:1;stroke-width:0.264583"
+         x="33.024532"
+         y="238.69698"
+         id="text68910-0-2"><tspan
+           sodipodi:role="line"
+           id="tspan68908-62-5"
+           style="fill:#140900;fill-opacity:1;stroke-width:0.264583"
+           x="33.024532"
+           y="238.69698">Commit 2</tspan></text>
+      <rect
+         style="fill:#73d216;stroke:#4e9a06;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+         id="rect97727-2-4"
+         width="35.539967"
+         height="9.5425749"
+         x="21.090168"
+         y="242.65546"
+         ry="1.873777" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0a1401;fill-opacity:1;stroke-width:0.264583"
+         x="32.893291"
+         y="249.05234"
+         id="text68910-6-7"><tspan
+           sodipodi:role="line"
+           id="tspan68908-1-44"
+           style="fill:#0a1401;fill-opacity:1;stroke-width:0.264583"
+           x="32.893291"
+           y="249.05234">Commit 1</tspan></text>
+    </g>
+    <path
+       style="fill:#204a87;stroke:#204a87;stroke-width:1.5875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Send)"
+       d="M 61.717623,165.18111 H 83.444415"
+       id="path110280"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g123161">
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.264583"
+         x="102.33569"
+         y="191.62903"
+         id="text90965"><tspan
+           sodipodi:role="line"
+           id="tspan90963"
+           style="fill:#204a87;stroke-width:0.264583"
+           x="102.33569"
+           y="191.62903">Base branch</tspan></text>
+      <g
+         id="g122230"
+         transform="translate(2.6053837,3.766932)">
+        <rect
+           style="fill:#edd400;stroke:#c4a000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect97727-8"
+           width="35.539967"
+           height="9.5425749"
+           x="122.50274"
+           y="135.93219"
+           ry="1.873777" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#131000;fill-opacity:1;stroke-width:0.264583"
+           x="134.51541"
+           y="142.32907"
+           id="text68910"><tspan
+             sodipodi:role="line"
+             id="tspan68908"
+             style="fill:#131000;fill-opacity:1;stroke-width:0.264583"
+             x="134.51541"
+             y="142.32907">Commit 4</tspan></text>
+        <rect
+           style="fill:#729fcf;stroke:#204a87;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect97727-7"
+           width="35.539967"
+           height="9.5425749"
+           x="122.50274"
+           y="146.28754"
+           ry="1.873777" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#04070f;fill-opacity:1;stroke-width:0.264583"
+           x="134.44556"
+           y="152.68442"
+           id="text68910-3"><tspan
+             sodipodi:role="line"
+             id="tspan68908-6"
+             style="fill:#04070f;fill-opacity:1;stroke-width:0.264583"
+             x="134.44556"
+             y="152.68442">Commit 3</tspan></text>
+        <rect
+           style="fill:#f57900;stroke:#ce5c00;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect97727-9"
+           width="35.539967"
+           height="9.5425749"
+           x="122.50274"
+           y="156.64288"
+           ry="1.873777" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#140900;fill-opacity:1;stroke-width:0.264583"
+           x="134.4371"
+           y="163.03976"
+           id="text68910-0"><tspan
+             sodipodi:role="line"
+             id="tspan68908-62"
+             style="fill:#140900;fill-opacity:1;stroke-width:0.264583"
+             x="134.4371"
+             y="163.03976">Commit 2</tspan></text>
+        <rect
+           style="fill:#73d216;stroke:#4e9a06;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect97727-2"
+           width="35.539967"
+           height="9.5425749"
+           x="122.50274"
+           y="166.99825"
+           ry="1.873777" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0a1401;fill-opacity:1;stroke-width:0.264583"
+           x="134.30586"
+           y="173.39513"
+           id="text68910-6"><tspan
+             sodipodi:role="line"
+             id="tspan68908-1"
+             style="fill:#0a1401;fill-opacity:1;stroke-width:0.264583"
+             x="134.30586"
+             y="173.39513">Commit 1</tspan></text>
+        <rect
+           style="fill:#cc0000;stroke:#a40000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:bevel"
+           id="rect97727"
+           width="35.539967"
+           height="9.5425749"
+           x="122.50274"
+           y="177.35359"
+           ry="1.873777" />
+        <text
+           xml:space="preserve"
+           style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#fef7f7;fill-opacity:1;stroke-width:0.264583"
+           x="140.23039"
+           y="183.75047"
+           id="text92707"><tspan
+             sodipodi:role="line"
+             id="tspan92705"
+             style="fill:#fef7f7;fill-opacity:1;stroke-width:0.264583"
+             x="140.23039"
+             y="183.75047">Commit: CI files</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.264583"
+         x="96.536446"
+         y="140.69333"
+         id="text94691"><tspan
+           sodipodi:role="line"
+           id="tspan94689"
+           style="fill:#204a87;stroke-width:0.264583"
+           x="96.536446"
+           y="140.69333">Pull Request HEAD</tspan></text>
+      <path
+         style="fill:#204a87;stroke:#204a87;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.529167, 0.529167;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 125.10812,139.69912 h -8.98234"
+         id="path102194" />
+      <path
+         style="fill:#204a87;stroke:#204a87;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.529167, 0.529167;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 125.10812,190.6631 h -8.98234"
+         id="path102194-7" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.264583"
+         x="102.01225"
+         y="166.16118"
+         id="text103677"><tspan
+           sodipodi:role="line"
+           id="tspan103675"
+           style="fill:#204a87;stroke-width:0.264583"
+           x="102.01225"
+           y="166.16118">Pull Request</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#a40000;stroke-width:0.264583"
+         x="142.92044"
+         y="202.52478"
+         id="text17428"><tspan
+           sodipodi:role="line"
+           id="tspan17426"
+           x="142.92044"
+           y="202.52478"
+           style="stroke-width:0.264583">Triggers</tspan><tspan
+           sodipodi:role="line"
+           x="142.92044"
+           y="207.81644"
+           style="stroke-width:0.264583"
+           id="tspan107051">CI run</tspan></text>
+      <path
+         style="fill:none;stroke:#a40000;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
+         d="m 142.87811,190.66309 v 7.12502"
+         id="path122878" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#a40000;stroke-width:0.264583"
+       x="90.807343"
+       y="110.09792"
+       id="text126201"><tspan
+         sodipodi:role="line"
+         id="tspan126199"
+         style="fill:#a40000;stroke-width:0.264583"
+         x="90.807343"
+         y="110.09792">Kernel Daemon Patches</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#a40000;stroke-width:0.264583"
+         x="90.807343"
+         y="115.38959"
+         id="tspan126203">adds CI files as a</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#a40000;stroke-width:0.264583"
+         x="90.807343"
+         y="120.68124"
+         id="tspan126205">new commit and</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#a40000;stroke-width:0.264583"
+         x="90.807343"
+         y="125.97291"
+         id="tspan126207">creates the GitHub PR</tspan></text>
+    <path
+       style="fill:none;stroke:#a40000;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
+       d="M 53.948634,115.40799 H 66.205075"
+       id="path127970" />
+    <path
+       style="fill:none;stroke:#a40000;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3-7)"
+       d="m 115.68479,115.40799 h 12.25644"
+       id="path127970-6" />
+  </g>
+</svg>

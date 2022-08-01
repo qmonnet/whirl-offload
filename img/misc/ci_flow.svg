@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="172.25632mm"
+   height="108.04681mm"
+   viewBox="0 0 651.04752 408.3659"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="ci_flow.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1108459"
+     inkscape:cx="323.17714"
+     inkscape:cy="187.24469"
+     inkscape:window-width="1600"
+     inkscape:window-height="871"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-midpoints="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="marker2009"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:#204a87;stroke:#204a87;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path902" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#204a87;fill-rule:evenodd;stroke:#204a87;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1519" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker2168"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#204a87;fill-rule:evenodd;stroke:#204a87;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2166" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#204a87;fill-rule:evenodd;stroke:#204a87;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1522" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-30.864759,-21.028603)">
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-1"
+       width="112.90865"
+       height="62.139099"
+       x="31.864759"
+       y="22.028603"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="87.959084"
+       y="59.242153"
+       id="text6787-7"><tspan
+         sodipodi:role="line"
+         id="tspan6785-2"
+         x="87.959084"
+         y="59.242153">Contributor</tspan></text>
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-2"
+       width="112.90865"
+       height="62.139099"
+       x="31.864759"
+       y="233.75772"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="87.823082"
+       y="260.97128"
+       id="text10157"><tspan
+         sodipodi:role="line"
+         id="tspan10155"
+         x="87.823082"
+         y="260.97128">Mailing list</tspan><tspan
+         sodipodi:role="line"
+         x="87.823082"
+         y="280.97128"
+         id="tspan10159">server</tspan></text>
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-6"
+       width="112.90865"
+       height="62.139099"
+       x="278.13422"
+       y="233.75774"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="333.78851"
+       y="270.73129"
+       id="text12231"><tspan
+         sodipodi:role="line"
+         id="tspan12229"
+         x="333.78851"
+         y="270.73129">Patchwork</tspan></text>
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-9-0"
+       width="200.10857"
+       height="62.139091"
+       x="357.66898"
+       y="22.028606"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="457.61127"
+       y="59.002148"
+       id="text12939"><tspan
+         sodipodi:role="line"
+         id="tspan12937"
+         x="457.61127"
+         y="59.002148">Kernel Patches Daemon</tspan></text>
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-6-3"
+       width="112.90865"
+       height="62.139099"
+       x="524.40369"
+       y="233.75774"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="580.87402"
+       y="270.73126"
+       id="text16403"><tspan
+         sodipodi:role="line"
+         x="580.87402"
+         y="270.73126"
+         id="tspan20752">GitHub</tspan></text>
+    <rect
+       style="fill:#fce94f;fill-opacity:1;stroke:#c4a000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect18101-9-4"
+       width="200.10857"
+       height="62.139091"
+       x="480.80371"
+       y="345.48477"
+       ry="18.763134" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#292300;fill-opacity:1"
+       x="580.698"
+       y="382.6983"
+       id="text17089"><tspan
+         sodipodi:role="line"
+         id="tspan17087"
+         x="580.698"
+         y="382.6983">GitHub runners</tspan></text>
+    <g
+       id="g38339"
+       transform="translate(0,-0.64930729)">
+      <text
+         xml:space="preserve"
+         style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87"
+         x="147.00043"
+         y="140.97652"
+         id="text6787"><tspan
+           sodipodi:role="line"
+           id="tspan6785"
+           x="147.00043"
+           y="140.97652">Sends patch</tspan></text>
+      <g
+         id="use36955"
+         style="fill:#000000;stroke:#204a87;stroke-opacity:1"
+         transform="matrix(3.5894903,0,0,3.5894903,112.32254,136.01854)">
+        <title
+           id="title39034">Mail</title>
+        <g
+           style="fill:none;stroke:#204a87;stroke-width:4"
+           id="g39044">
+          <path
+             d="m 2.778125,14.578542 h 13.49375 V 4.6302083 H 2.778125 Z"
+             id="path39036"
+             style="stroke:#204a87;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none" />
+          <path
+             d="M 2.9104167,4.6963542 8.73125,10.675937 c 0.4233333,0.423334 1.1641667,0.423334 1.5875,0.0033 l 5.820833,-5.9828908"
+             id="path39038"
+             style="stroke:#204a87;stroke-width:1.05833" />
+          <path
+             d="M 3.175,14.2875 7.6464583,9.7895833"
+             id="path39040"
+             style="stroke:#204a87;stroke-width:1.05833" />
+          <path
+             d="M 15.875,14.2875 11.403542,9.7895833"
+             id="path39042"
+             style="stroke:#204a87;stroke-width:1.05833" />
+        </g>
+      </g>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2009)"
+       d="M 88.319087,85.167702 V 232.75772"
+       id="path915"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 145.77341,264.82727 131.3608,10e-6"
+       id="path917"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 489.93188,84.167697 580.85799,233.75774"
+       id="path921"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 580.85799,295.89685 2e-5,49.58792"
+       id="path923"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 120.88106,296.89682 52.52585,50.07027"
+       id="path1427"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 91.380558,296.89682 28.030802,82.56615"
+       id="path1429"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 66.087914,296.89682 61.6107,363.94095"
+       id="path1431"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#204a87;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart);marker-end:url(#marker2168)"
+       d="M 421.29017,84.167697 334.58853,233.75773"
+       id="path1947"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87"
+       x="328.42236"
+       y="127.73521"
+       id="text7980"><tspan
+         sodipodi:role="line"
+         id="tspan7978"
+         x="328.42236"
+         y="127.73521">Polls and</tspan><tspan
+         sodipodi:role="line"
+         x="328.42236"
+         y="147.7352"
+         id="tspan7982">retrieves</tspan><tspan
+         sodipodi:role="line"
+         x="328.42236"
+         y="167.7352"
+         id="tspan27521">the patch</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87"
+       x="588.87366"
+       y="137.34322"
+       id="text9914"><tspan
+         sodipodi:role="line"
+         id="tspan9912"
+         x="588.87366"
+         y="137.34322">Creates a</tspan><tspan
+         sodipodi:role="line"
+         x="588.87366"
+         y="157.34322"
+         id="tspan24558">Pull Request</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#a40000"
+       x="627.69458"
+       y="429.20251"
+       id="text17428"><tspan
+         sodipodi:role="line"
+         id="tspan17426"
+         x="627.69458"
+         y="429.20251">Runs the CI</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.25;font-family:FiraGO;-inkscape-font-specification:FiraGO;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;fill-opacity:1"
+       x="130.4969"
+       y="399.61493"
+       id="text47181"><tspan
+         sodipodi:role="line"
+         id="tspan47179"
+         x="130.4969"
+         y="399.61493">Forwards emails</tspan></text>
+  </g>
+</svg>
