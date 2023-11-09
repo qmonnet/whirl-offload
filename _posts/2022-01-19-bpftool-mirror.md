@@ -5,7 +5,7 @@ date:   2022-01-19
 author: Quentin Monnet
 employer: isovalent
 excerpt: Announcement for the bpftool mirror repository on GitHub.
-categories: BPF
+categories: Bpftool
 tags: [BPF]
 ---
 

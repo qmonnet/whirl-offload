@@ -6,7 +6,7 @@ author: Quentin Monnet
 employer: isovalent
 excerpt: Working with eBPF? Discover how bpftool can help you load, inspect,
   update your eBPF programs, maps, and more.
-categories: BPF
+categories: Bpftool
 tags: [BPF, bpftool]
 ---
 

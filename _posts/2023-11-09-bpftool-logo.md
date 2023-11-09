@@ -5,7 +5,7 @@ date:   2023-11-09
 author: Quentin Monnet
 employer: isovalent
 excerpt: Introducing bpftool's new logo
-categories: BPF
+categories: Bpftool
 tags: [BPF]
 ---
 
