@@ -76,9 +76,10 @@ KubeCon][kubecon], but we managed to keep a few for LPC, and I handed over
 twenty copies or so. Some people asked me to sign it (which I consider a great
 honour). If you find yourself a copy and manage to find me at an event, I'll
 gladly sign it, too (provided I don't forget my pen, like for LPC; maybe bring
-your pen just in case). We'd like to find a way for people to buy physical
-copies online, but nothing's been decided yet. We also plan to publish the
-source files for the book, this should happen Soon™.
+your pen just in case). Bill signs copies as well, if you meet him first. We'd
+like to find a way for people to buy physical copies online, but nothing's been
+decided yet. We also plan to publish the source files for the book, this should
+happen Soon™.
 
 Now that this children's book is done, we also have a few ideas for future
 related works. Again, nothing's been decided yet, we'll see where this takes
