@@ -60,7 +60,7 @@ found our way to compliance.
 More recently, we started to get our hands dirty with Kubernetes and to deploy
 pods, services, and volumes at scale, in a more convenient way.
 
-#### How did this previous solutions work for you?
+#### How did these previous solutions work for you?
 
 Well, we got the presents sorted all these years, haven't we? But some
 solutions worked better than others, as we've discovered through the years.
