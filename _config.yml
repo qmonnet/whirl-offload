@@ -19,7 +19,7 @@ author: Quentin Monnet
 repository: "qmonnet/whirl-offload"
 
 socnet_users:
-  - twitter_username: Qeole
+  - mastodon_username: Qeole
     github_username:  qmonnet
   - twitter_username: 6WINDsoftware
     github_username:  6WIND
@@ -27,6 +27,7 @@ socnet_users:
     github_username:  Netronome
   - twitter_username: Isovalent
     github_username:  Isovalent
+  - github_username: githedgehog
 
 # Build settings
 markdown: kramdown
