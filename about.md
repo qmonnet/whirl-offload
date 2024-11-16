@@ -40,14 +40,14 @@ blogs, even though you may find that they are more commercial than technical.
 [Here you will find 6WIND's](http://www.6wind.com/blog/), and [there is
 Netronome's](https://www.netronome.com/blog/). Isovalent has [its corporate
 blog](https://isovalent.com/blog), but also contributes a lot to [Cilium's
-blog](https://cilium.io/blog), which is more technical.
+blog](https://cilium.io/blog), which is more technical. [Here's the blog from
+Hedgehog](https://hedgehog.cloud/blog).
 
 # About me
 
-I am Quentin <span style="font-variant: small-caps;">Monnet</span>, a French
-R&D engineer. I joined 6WIND in fall 2015, after completing my PhD in computer
-science, and changed for Netronome two years later, in fall 2017. In 2020, I
-moved again to Isovalent.
+I am Quentin Monnet, R&D and Software Engineer. I joined 6WIND after completing
+my PhD in computer science, then I worked successively for Netronome,
+Isovalent, and Hedgehog.
 
 <figure>
   <img alt="Little Helper" src="{{ site.baseurl }}/img/site/littlehelper.svg" style="width:150px;" />
@@ -74,7 +74,7 @@ there go by one motto: _Speed Matters_!
 </figure>
 
 6WIND also contributes to several open-source projects, including DPDK, the
-Linux networking stack, OpenStack, Open vSwitch, Quagga / FRRouting and a few
+Linux networking stack, OpenStack, Open vSwitch, Quagga/FRRouting and a few
 others.
 
 It is also involved in research activities, and takes part in projects such as
@@ -130,12 +130,33 @@ features—too many to list here!
 Isovalent builds its product on top of the project, and offers a hardened and
 supported distribution of Cilium with advanced observability and security
 workflows. The company maintains Cilium and co-maintains the eBPF subsystem in
-Linux. I work on Cilium's eBPF-powered datapath, and on a few other components.
+Linux. I worked on Cilium's eBPF-powered datapath, and on a few other
+components.
 
 Have a look at [Isovalent's website][isovalent] for more information.
 
 [cilium]: https://cilium.io/
 [isovalent]: https://isovalent.com/
+
+# About Hedgehog
+
+The [Open Network Fabric][fabric] is a platform to help users deploy their own
+cloud-native network infrastructure and enjoy the experience of a public cloud,
+but on their own premises, with high throughput and low latency. The project is
+open-source, and reuses other open-source components such as the SONiC network
+operating system. I work on the dataplane.
+
+<figure>
+  <img alt="Hedgehog's logo" src="{{ site.baseurl }}/img/site/Hedgehog.svg" style="width:300px"/>
+</figure>
+
+Hedgehog is the creator and maintainer of the Open Network Fabric, and provides
+support for it.
+
+More information is available on [Hedgehog's website][hedgehog].
+
+[fabric]: https://docs.githedgehog.com/
+[hedgehog]: https://hedgehog.cloud/
 
 # Credits
 
